@@ -22,6 +22,13 @@
 
         }
 
+        #slogan
+        {
+            font-size: 25px;
+            letter-spacing: 5px;
+            color: black;
+        }
+
         #name
         {
             font-size:80px;
@@ -39,7 +46,7 @@
 
     <h1 id="name">Teatopia</h1>
     <br>
-
+    <p id="slogan">Admin</p>
 
 </div>
 

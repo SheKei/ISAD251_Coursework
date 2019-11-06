@@ -33,6 +33,10 @@
             background-color: #F9F871;
             color: black;
             margin-bottom:0;
+            margin-left: 0;
+            margin-right: 0;
+            postion: absolute;
+
         }
 
 
