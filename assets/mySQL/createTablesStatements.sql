@@ -17,7 +17,8 @@ CREATE TABLE ISAD251_STong.TeaRoom_Item(
 	vegan BOOLEAN NOT NULL,
 	vegetarian BOOLEAN NOT NULL,
 	nut_free BOOLEAN NOT NULL,
-	img_path VARCHAR(300) NOT NULL
+	img_path VARCHAR(300) NOT NULL,
+	item_status VARCHAR(10) NOT NULL
 
 );
 
