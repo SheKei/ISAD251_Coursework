@@ -24,12 +24,12 @@ CREATE TABLE ISAD251_STong.TeaRoom_Item(
 
 CREATE TABLE ISAD251_STong.TeaRoom_Order(
 
-	order_id INT(4) NOT NULL,
+	order_id INT AUTO_INCREMENT NOT NULL,
 	table_number INT(3) NOT NULL,
 	order_date DATETIME NOT NULL,
 	item_id INT NOT NULL,
 	quantity INT(3) NOT NULL,
-	order_status VARCHAR(15),
+	order_status VARCHAR(15) NOT NULL,
 	CONSTRAINT PK_Order PRIMARY KEY(order_id, table_number, order_date, item_id),
 	FOREIGN KEY (table_number) REFERENCES ISAD251_STong.TeaRoom_Table(table_number),
 	FOREIGN KEY (item_id) REFERENCES ISAD251_STong.TeaRoom_Item(item_id)
@@ -38,7 +38,7 @@ CREATE TABLE ISAD251_STong.TeaRoom_Order(
 
 CREATE TABLE ISAD251_STong.TeaRoom_Favourite(
 
-	fav_id INT(5) NOT NULL,
+	fav_id INT AUTO_INCREMENT NOT NULL,
 	table_number INT(3) NOT NULL,
 	item_id INT NOT NULL,
 	CONSTRAINT PK_Favourite PRIMARY KEY(fav_id,table_number, item_id),
