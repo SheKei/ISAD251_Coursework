@@ -2,11 +2,13 @@
 <html lang="en">
 <?php
 include_once '../header.php';
+include_once '../../src/controller/menuFilter.php';
 
-IF(ISSET($_POST['submitBtn'])) //If filter button has been pressed
+if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 {
-    echo "Im in here";
+    filter();
 }
+
 ?>
 <head>
 
@@ -32,7 +34,6 @@ IF(ISSET($_POST['submitBtn'])) //If filter button has been pressed
                 <input type="radio" name="category" value="Drink"> Drinks<br>
                 <input type="radio" name="category" value="both"> Both<br>
             </div>
-            <br>
             <br>
             <div>
                 <input type="checkbox" name="nutFree" value="True"> Nut Free<br>
