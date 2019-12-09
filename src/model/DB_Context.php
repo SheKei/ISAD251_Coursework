@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sheke
- * Date: 09/12/2019
- * Time: 18:24
- */
+include_once 'menuItem.php';
 
 class DB_Context
 {
@@ -34,15 +29,26 @@ class DB_Context
         }
     }
 
-    public function showMenu($nut, $veg, $vegan, $category1, $category2)
+    public function showMenu($sql)
     {
-        //Put parameters into procedure
-        $sql = "CALL isad251_stong.Tearoom_Menu(".$nut.",".$veg.",".$vegan.",".$category1.",".$category2.")";
-
         $statement = $this->connection->prepare($sql);
 
-        $statement->execute();
+        $statement->execute(); //Execute statement
 
-        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Store results of stored procedure
+
+        $menuItems = []; //Create an array to store menu item objects
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $aMenuItem = new menuItem( $row['name'], $row['selling_price']); //Create object from each row
+                $menuItems[] = $aMenuItem;//Store object
+            }
+        }
+
+        return $menuItems; //Return to menuFilter controller
+
     }
 }

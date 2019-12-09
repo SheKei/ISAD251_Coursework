@@ -3,10 +3,14 @@
 <?php
 include_once '../header.php';
 include_once '../../src/controller/menuFilter.php';
+include_once '../../src/model/menuItem.php';
+include_once '../../src/model/DB_Context.php';
+
+$menuItems = ""; //Initialize return object
 
 if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 {
-    filter();
+    $sql = filter();
 }
 
 ?>
@@ -25,8 +29,10 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 <div class="container">
     <div class="col-lg-12 text-center">
         <h3>Filter</h3>
+        <br>
     </div>
 
+    <!--Layout for filter function -->
     <div class="col-lg-12 text-center">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <div>
@@ -45,6 +51,31 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
         </form>
     </div>
 </div>
+
+<!--Layout for menu output -->
+<div class="container">
+    <?php
+
+        if($sql) //If success in return sql statement
+        {
+            $displayString = "";
+            echo'here';
+
+            $db = new DB_Context();
+            $menuItems = $db->showMenu($sql);
+
+            foreach($menuItems as $menuItem)
+            {
+                $displayString = "<p>".$menuItem->getName()." - £".$menuItem->getPrice()."</p>";
+                echo $displayString;
+            }
+        }
+
+    ?>
+</div>
+
+
+
 
 </body>
 <?php

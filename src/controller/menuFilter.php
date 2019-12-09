@@ -48,8 +48,9 @@ function filter()
         $vegan =1; //Want to see vegan friendly items
     }
 
-    $db = new DB_Context(); //Create new database object
+    //Put parameters into procedure
+    $sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
 
-    $db->showMenu($nutFree,$veg, $vegan,$category1, $category2); //Call procedure to filter
+    return $sql; //Go back to menu.php
 
 }
