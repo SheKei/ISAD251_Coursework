@@ -1,5 +1,6 @@
 <?php
 include_once 'menuItem.php';
+include_once 'item.php';
 
 class DB_Context
 {
@@ -29,8 +30,10 @@ class DB_Context
         }
     }
 
-    public function showMenu($sql)
+    public function showMenu($nutFree,$veg,$vegan,$category1,$category2)
     {
+        $sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
+
         $statement = $this->connection->prepare($sql);
 
         $statement->execute(); //Execute statement
@@ -43,12 +46,37 @@ class DB_Context
         {
             foreach($result as $row)
             {
-                $aMenuItem = new menuItem( $row['name'], $row['selling_price']); //Create object from each row
+                $aMenuItem = new menuItem( $row['item_id'],$row['name'], $row['selling_price'], $row['vegan'], $row['vegetarian'], $row['nut_free'], $row['img_path']); //Create object from each row
                 $menuItems[] = $aMenuItem;//Store object
+
             }
         }
 
         return $menuItems; //Return to menuFilter controller
 
+    }
+
+    public function viewTheItem($id)
+    {
+        $sql = "CALL isad251_stong.Tearoom_View_Item(".$id.")";
+
+        $statement = $this->connection->prepare($sql);
+
+        $statement->execute(); //Execute statement
+
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Store results of stored procedure
+
+        $viewItem = [];
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $item = new menuItem( $row['item_id'],$row['name'], $row['selling_price'], $row['vegan'], $row['vegetarian'], $row['nut_free'], $row['img_path']); //Create object from each row
+                $viewItem[] = $item;//Store object
+            }
+        }
+
+        return $item;
     }
 }

@@ -31,6 +31,8 @@ class item
         $this->itemStatus = $itemStatus;
     }
 
+
+
     //SETTERS AND GETTERS FOR ALL ATTRIBUTES
 
     public function getId()

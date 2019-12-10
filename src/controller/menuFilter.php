@@ -49,8 +49,10 @@ function filter()
     }
 
     //Put parameters into procedure
-    $sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
+    //$sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
 
-    return $sql; //Go back to menu.php
+    $db = new DB_Context();
+    $items = $db->showMenu($nutFree,$veg,$vegan,$category1,$category2);//To DB_Context
+    return $items; //Go back to menu.php
 
 }

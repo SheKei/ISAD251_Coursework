@@ -3,14 +3,15 @@
 <?php
 include_once '../header.php';
 include_once '../../src/controller/menuFilter.php';
+include_once 'viewItem.php';
 include_once '../../src/model/menuItem.php';
 include_once '../../src/model/DB_Context.php';
 
-$menuItems = ""; //Initialize return object
+$menuItems = ""; //Initialize return array of object
 
 if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 {
-    $sql = filter();
+    $menuItems = filter();
 }
 
 ?>
@@ -53,26 +54,25 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 </div>
 
 <!--Layout for menu output -->
-<div class="container">
+<form action="viewItem.php" method="get">
     <?php
 
-        if($sql) //If success in return sql statement
+        if($menuItems) //If there are objects in menuItems array
         {
             $displayString = "";
-            echo'here';
 
-            $db = new DB_Context();
-            $menuItems = $db->showMenu($sql);
+            //$db = new DB_Context();
+            //$menuItems = $db->showMenu($sql);
 
             foreach($menuItems as $menuItem)
             {
-                $displayString = "<p>".$menuItem->getName()." - £".$menuItem->getPrice()."</p>";
+                $displayString = "<p><a href='viewItem.php?object=".$menuItem->getId()."'>".$menuItem->getName()."</a>- £".$menuItem->getPrice()."</p>";
                 echo $displayString;
             }
         }
 
     ?>
-</div>
+</form>
 
 
 
