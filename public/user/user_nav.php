@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<!--
- template for nav bar from: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_startup;
--->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/e346805cf1.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style>
-        #link {
-            color: black;
 
-            font-space: 10px;
-        }
-
-        .w3-top
+        #navBar
         {
-            background-color: #F9F871;
+            margin: 0 0 0 0;
+            font-size: 30px;
+
         }
+
 
 
     </style>
-</head>
 
+
+</head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top" >
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
-        <!-- Right-sided navbar links -->
-        <div class="w3-left w3-hide-small">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navBar">
+    <a class="navbar-brand" style="font-size: 25px" href="user_home.php">Home</a>
 
-            <a href="favourites.php" class="w3-bar-item w3-button" id="link"><i class="far fa-heart">FAVORITES</i> </a>
-            <a href="order_history_user.php" class="w3-bar-item w3-button" id="link"><i class="fas fa-history"> ORDER HISTORY</i></a>
-            <a href="menu.php" class="w3-bar-item w3-button" id="link"><i class="fas fa-utensils">MENU</i></a>
-            <a href="confirm_order.php" class="w3-bar-item w3-button" id="link"><i class="fas fa-shopping-basket"></i></a>
-        </div>
+        <ul class="nav navbar-nav" id="links">
+            <li class="nav-item">
+                <a class="nav-link" href="menu.php">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="favourites.php">Favourites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="basket.php">Basket</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav  ml-auto">
+            <button type="button" style="font-size: 20px; color: black;" class="btn btn-warning"><a href="../start.php">Leave</a></button>
+        </ul>
+
+</nav>
+
 
 </body>
-
+</html>
