@@ -30,6 +30,7 @@ class DB_Context
         }
     }
 
+    //Show all menu items as a CUSTOMER under specific filters
     public function showMenu($nutFree,$veg,$vegan,$category1,$category2)
     {
         $sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
@@ -56,6 +57,7 @@ class DB_Context
 
     }
 
+    //View specific details of a single item from the menu as a CUSTOMER
     public function viewTheItem($id)
     {
         $sql = "CALL isad251_stong.Tearoom_View_Item(".$id.")";

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include_once  'user_nav.php';
 include_once '../header.php';
 ?>
 <head>

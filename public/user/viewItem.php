@@ -5,7 +5,7 @@ include_once '../header.php';
 include_once '../../src/model/menuItem.php';
 include_once '../../src/model/DB_Context.php';
 
-if(isset($_GET['object']))
+if(isset($_GET['object']))                  //If id of item was successfully passed from menu page
 {
     displayObject($_GET['object']);
 }
@@ -25,9 +25,9 @@ if(isset($_GET['object']))
         {
             $db = new DB_Context();
 
-            $object = $db->viewTheItem($id);
+            $object = $db->viewTheItem($id); //Return with item user wishes to view
 
-            if($object)
+            if($object)                      //If object has been returned as not null
             {
                 displayItem($object);
             }
@@ -40,20 +40,20 @@ if(isset($_GET['object']))
 
             echo $nameHeader;
 
-            if($item->getVegan() == 1)
+            if($item->getVegan() == 1)       //If item is vegan friendly
             {
                 $vegan = " Suitable for Vegans ";
                 $veganPara = "<p>".$vegan."</p>";
                 echo $veganPara;
             }
-            if($item->getVegetarian()==1)
+            if($item->getVegetarian()==1)   //If item is vegetarian friendly
             {
                 $veg = " Suitable for Vegetarians ";
                 $vegPara = "<p>".$veg."</p>";
                 echo $vegPara;
             }
 
-            if($item->getNutFree() == 1)
+            if($item->getNutFree() == 1)    //If item contains no nuts
             {
                 $nut = " Nut-Free ";
                 $nutPara = "<p>".$nut."</p>";

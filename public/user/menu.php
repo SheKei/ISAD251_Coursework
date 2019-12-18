@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+include_once  'user_nav.php';
 include_once '../header.php';
 include_once '../../src/controller/menuFilter.php';
 include_once 'viewItem.php';
 include_once '../../src/model/menuItem.php';
 include_once '../../src/model/DB_Context.php';
+
 
 $menuItems = ""; //Initialize return array of object
 
