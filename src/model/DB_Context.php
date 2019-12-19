@@ -30,16 +30,32 @@ class DB_Context
         }
     }
 
+    //Return output from procedures containing SELECT statements
+    public function executeStatement($sqlStatement)
+    {
+        $sqlStatement = $this->connection->prepare($sqlStatement);
+
+        $sqlStatement->execute();
+
+        $theResult = $sqlStatement->fetchAll(PDO::FETCH_ASSOC); //Store results of stored procedure
+
+        return $theResult;
+    }
+
+    //Same function but nothing is being returned as output - i.e INSERT/DELETE/UPDATE statements
+    public function executeStatementNoOutput($sqlStatement)
+    {
+        $sqlStatement = $this->connection->prepare($sqlStatement);
+
+        $sqlStatement->execute();
+    }
+
     //Show all menu items as a CUSTOMER under specific filters
     public function showMenu($nutFree,$veg,$vegan,$category1,$category2)
     {
         $sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
 
-        $statement = $this->connection->prepare($sql);
-
-        $statement->execute(); //Execute statement
-
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Store results of stored procedure
+        $result = $this->executeStatement($sql);
 
         $menuItems = []; //Create an array to store menu item objects
 
@@ -61,14 +77,10 @@ class DB_Context
     public function viewTheItem($id)
     {
         $sql = "CALL isad251_stong.Tearoom_View_Item(".$id.")";
-
-        $statement = $this->connection->prepare($sql);
-
-        $statement->execute(); //Execute statement
-
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Store results of stored procedure
+        $result = $this->executeStatement($sql);
 
         $viewItem = [];
+        $item ="";
 
         if($result)//If there are any results returned from procedure
         {
@@ -87,16 +99,12 @@ class DB_Context
     public function insertNewOrder($tableNumber)
     {
         $sql = "CALL isad251_stong.Tearoom_Insert_Order(".$tableNumber.")";
-
-        $statement = $this->connection->prepare($sql);
-
-        $statement->execute();
+        $this->executeStatementNoOutput($sql);
 
         $sql = "SELECT MAX(tearoom_order.order_id) AS orderId FROM ISAD251_STong.tearoom_order";
-        $statement = $this->connection->prepare($sql);
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Result stored in an array so have to use foreach statement
+        $result = $this->executeStatement($sql);
         $orderId =0;
+
         if($result)//If there are any results returned from procedure
         {
             foreach($result as $row)
@@ -112,9 +120,13 @@ class DB_Context
     public function insertNewOrderItem($tableNum, $itemId, $orderAmount, $orderId)
     {
         $sql = "CALL isad251_stong.Tearoom_Insert_Order_Item(".$tableNum." , ".$itemId." , ".$orderAmount." , ".$orderId.")";
+        $this->executeStatementNoOutput($sql);
+    }
 
-        $statement = $this->connection->prepare($sql);
-
-        $statement->execute();
+    //View current items in order
+    public function viewCurrentItems($tableNumber, $orderId)
+    {
+        $sql = "CALL isad251_stong.viewCurrentOrderItems(".$tableNumber.",".$orderId.")";
+        $result = $this->executeStatement($sql);
     }
 }
