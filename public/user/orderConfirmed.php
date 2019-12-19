@@ -1,12 +1,17 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 include_once  'user_nav.php';
 include_once '../header.php';
+include_once '../../src/model/DB_Context.php';
 
 if(isset($_POST['confirmBtn']))
 {
-    echo "here";
+    $db = new DB_Context();
+    $db->confirmOrder($_SESSION['tableNum'], $_SESSION['id']);
 }
 
 ?>

@@ -176,5 +176,12 @@ class DB_Context
 
     }
 
+    //Set order status to "confirmed - ongoing" --> customer has finished ordering
+    public function confirmOrder($tableNumber, $orderId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Confirm_Order(".$tableNumber.",".$orderId.")";
+        $this->executeStatementNoOutput($sql);
+    }
+
 
 }
