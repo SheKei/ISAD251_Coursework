@@ -81,4 +81,30 @@ class DB_Context
 
         return $item;
     }
+
+    //Insert order with status = ordering when user selects their table number
+    //Return the order id of new order
+    public function insertNewOrder($tableNumber)
+    {
+        $sql = "CALL isad251_stong.Tearoom_Insert_Order(".$tableNumber.")";
+
+        $statement = $this->connection->prepare($sql);
+
+        $statement->execute();
+
+        $sql = "SELECT MAX(tearoom_order.order_id) AS orderId FROM ISAD251_STong.tearoom_order";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC); //Result stored in an array so have to use foreach statement
+        $orderId =0;
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $orderId = $row['orderId'];
+            }
+        }
+
+        return $orderId;
+    }
 }
