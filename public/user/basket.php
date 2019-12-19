@@ -32,6 +32,7 @@ include_once '../../src/model/DB_Context.php';
 <div class="container" id="output">
 
     <?php
+        $breakLine="";
         $db = new DB_Context();
 
         $currentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']);
