@@ -133,11 +133,29 @@ class DB_Context
             foreach($result as $row)
             {
                 $theOrderItem = new orderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
+                $thePrice = $this->calculateTotalPriceForEachItem($tableNumber, $orderId, $theOrderItem->getId()); //Get calculated price
+                $theOrderItem->setTotalItemPrice($thePrice);//Save to object
                 $orderItems[] = $theOrderItem;//Store object
 
             }
         }
 
         return $orderItems;
+    }
+
+    //Returns calculated cost of item * quantity
+    public function calculateTotalPriceForEachItem($tableNum, $orderNum, $item)
+    {
+        $sql = "CALL ISAD251_STong.calculateTotalItemPrice(".$tableNum.",".$orderNum.",".$item.")";
+        $price = $this->executeStatement($sql);
+        if($price)//If there are any results returned from procedure
+        {
+            foreach($price as $row)
+            {
+                $price = $row['totalPrice'];
+            }
+        }
+
+        return $price;
     }
 }

@@ -43,8 +43,9 @@ include_once '../../src/model/DB_Context.php';
                 $itemName = $currentItem->getName();
                 $price = " Individual Price: £".$currentItem->getSinglePrice();
                 $amount = "Quantity: ".$currentItem->getAmount();
+                $totalItemPrice = "Total Price: £".$currentItem->getTotalItemPrice();
 
-                $displayString = $itemName." ".$price." ".$amount;
+                $displayString = $itemName."    ".$price."  ".$amount." ".$totalItemPrice;
                 $breakLine = "<br>";
 
                 echo $displayString;
