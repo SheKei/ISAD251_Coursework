@@ -45,14 +45,21 @@ include_once '../../src/model/DB_Context.php';
                 $amount = "Quantity: ".$currentItem->getAmount();
                 $totalItemPrice = "Total Price: £".$currentItem->getTotalItemPrice();
 
-                $displayString = $itemName."    ".$price."  ".$amount." ".$totalItemPrice;
+                $displayString = "<p>".$itemName."  ".$price."  ".$amount."  ".$totalItemPrice."</p>";
                 $breakLine = "<br>";
 
                 echo $displayString;
                 echo $breakLine;
-                echo $breakLine;
             }
         }
+
+        echo $breakLine;
+        $orderCost = "TOTAL ORDER PRICE: £".$db->calculateTotalOrderPrice($_SESSION['tableNum'], $_SESSION['id']);
+        $displayPrice = "<p>".$orderCost."</p>";
+
+        echo $displayPrice;
+        echo $breakLine;
+
 
 
     ?>
@@ -61,7 +68,7 @@ include_once '../../src/model/DB_Context.php';
 </div>
 
 <div class="container">
-    <form action="" method="POST">
+    <form action="orderConfirmed.php" method="POST">
         <input type="submit" name="confirmBtn" value="Confirm Order">
     </form>
 </div>

@@ -158,4 +158,23 @@ class DB_Context
 
         return $price;
     }
+
+    //Returns total cost of an order
+    public function calculateTotalOrderPrice($tableNumber, $orderId)
+    {
+        $sql = "CALL ISAD251_STong.calculateTotalOrder(".$tableNumber.",".$orderId.")";
+        $orderPrice = $this->executeStatement($sql);
+        if($orderPrice)
+        {
+            foreach($orderPrice as $row)
+            {
+                $orderPrice = $row['totalPrice'];
+            }
+        }
+
+        return $orderPrice;
+
+    }
+
+
 }

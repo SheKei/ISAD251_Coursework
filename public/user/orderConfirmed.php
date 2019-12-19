@@ -4,7 +4,10 @@
 include_once  'user_nav.php';
 include_once '../header.php';
 
-
+if(isset($_POST['confirmBtn']))
+{
+    echo "here";
+}
 
 ?>
 <head>
