@@ -37,22 +37,27 @@ class orderItem
 
     public function getId()
     {
-        $this->itemId;
+        return $this->itemId;
     }
 
     public function getName()
     {
-        $this->itemName;
+        return $this->itemName;
     }
 
     public function getAmount()
     {
-        $this->singlePrice;
+        return $this->orderQuantity;
+    }
+
+    public function getSinglePrice()
+    {
+        return $this->singlePrice;
     }
 
     public function getTotalItemPrice()
     {
-        $this->totalPrice;
+        return $this->totalPrice;
     }
 
 

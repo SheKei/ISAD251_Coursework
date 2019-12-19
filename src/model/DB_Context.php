@@ -1,6 +1,7 @@
 <?php
 include_once 'menuItem.php';
 include_once 'item.php';
+include_once 'orderItem.php';
 
 class DB_Context
 {
@@ -78,8 +79,6 @@ class DB_Context
     {
         $sql = "CALL isad251_stong.Tearoom_View_Item(".$id.")";
         $result = $this->executeStatement($sql);
-
-        $viewItem = [];
         $item ="";
 
         if($result)//If there are any results returned from procedure
@@ -87,7 +86,6 @@ class DB_Context
             foreach($result as $row)
             {
                 $item = new menuItem( $row['item_id'],$row['name'], $row['selling_price'], $row['vegan'], $row['vegetarian'], $row['nut_free'], $row['img_path']); //Create object from each row
-                $viewItem[] = $item;//Store object
             }
         }
 
@@ -123,10 +121,23 @@ class DB_Context
         $this->executeStatementNoOutput($sql);
     }
 
-    //View current items in order
+    //Return array of current items in order
     public function viewCurrentItems($tableNumber, $orderId)
     {
         $sql = "CALL isad251_stong.viewCurrentOrderItems(".$tableNumber.",".$orderId.")";
         $result = $this->executeStatement($sql);
+        $orderItems = [];
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $theOrderItem = new orderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
+                $orderItems[] = $theOrderItem;//Store object
+
+            }
+        }
+
+        return $orderItems;
     }
 }
