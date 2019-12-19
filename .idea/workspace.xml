@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="Readjusted navigation bar">
+      <change beforePath="$PROJECT_DIR$/public/user/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/user/viewItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/viewItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DB_Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DB_Context.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/user/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="52" column="14" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="65" />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -24,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/user/viewItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="46">
+              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -33,15 +35,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/choose_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459" />
+            <state relative-caret-position="-51" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="1" column="2" selection-end-line="2" selection-end-column="2" />
+            <state relative-caret-position="17">
+              <caret line="1" column="3" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -58,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+            <state relative-caret-position="1615">
+              <caret line="113" column="110" selection-start-line="113" selection-start-column="110" selection-end-line="113" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -93,13 +95,13 @@
         <option value="$PROJECT_DIR$/src/model/item.php" />
         <option value="$PROJECT_DIR$/src/model/menuItem.php" />
         <option value="$PROJECT_DIR$/public/user/favourites.php" />
-        <option value="$PROJECT_DIR$/public/user/menu.php" />
         <option value="$PROJECT_DIR$/public/user/basket.php" />
         <option value="$PROJECT_DIR$/src/model/order.php" />
-        <option value="$PROJECT_DIR$/src/model/DB_Context.php" />
-        <option value="$PROJECT_DIR$/public/user/user_home.php" />
         <option value="$PROJECT_DIR$/public/start.php" />
         <option value="$PROJECT_DIR$/public/user/user_nav.php" />
+        <option value="$PROJECT_DIR$/public/user/user_home.php" />
+        <option value="$PROJECT_DIR$/src/model/DB_Context.php" />
+        <option value="$PROJECT_DIR$/public/user/menu.php" />
         <option value="$PROJECT_DIR$/public/user/viewItem.php" />
       </list>
     </option>
@@ -173,7 +175,7 @@
       <updated>1575905463605</updated>
       <workItem from="1575905464831" duration="23412000" />
       <workItem from="1576671442961" duration="6318000" />
-      <workItem from="1576757936083" duration="6059000" />
+      <workItem from="1576757936083" duration="9187000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -207,7 +209,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35789000" />
+    <option name="totallyTimeSpent" value="38917000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -334,36 +336,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="1" column="2" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="1" column="3" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/choose_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459" />
+        <state relative-caret-position="-51" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="113" column="110" selection-start-line="113" selection-start-column="110" selection-end-line="113" selection-end-column="110" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/user/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="65" />
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/user/viewItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="46">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
         </state>
       </provider>
     </entry>

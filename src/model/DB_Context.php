@@ -107,4 +107,14 @@ class DB_Context
 
         return $orderId;
     }
+
+    //Add an item to order with its quantity
+    public function insertNewOrderItem($tableNum, $itemId, $orderAmount, $orderId)
+    {
+        $sql = "CALL isad251_stong.Tearoom_Insert_Order_Item(".$tableNum." , ".$itemId." , ".$orderAmount." , ".$orderId.")";
+
+        $statement = $this->connection->prepare($sql);
+
+        $statement->execute();
+    }
 }
