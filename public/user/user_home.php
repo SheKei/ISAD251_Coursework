@@ -8,8 +8,6 @@ include_once '../header.php';
 include_once  '../../src/model/DB_Context.php';
 include_once  '../../src/model/order.php';
 
-
-
 if(isset ($_POST['tableNumber']))
 {
     $db = new DB_Context();
@@ -35,7 +33,6 @@ else
 
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <style>
 
@@ -44,8 +41,6 @@ else
             }
 
         </style>
-
-
     </head>
 
     <body>
@@ -54,6 +49,18 @@ else
         <div class="col-lg-12 text-center">
             <h2>Welcome! Your Table Number is <?php echo $_SESSION['tableNum'] ?> </h2>
         </div>
+    </div>
+
+    <div class="container">
+
+        <?php
+
+            $db = new DB_Context();
+            $confirmedItems = $db->viewConfirmedOrderItems($_SESSION['tableNum'], $_SESSION['id']);
+            showOutput($confirmedItems, $db);
+
+        ?>
+
     </div>
 
 

@@ -128,19 +128,26 @@ class DB_Context
         $result = $this->executeStatement($sql);
         $orderItems = [];
 
-        if($result)//If there are any results returned from procedure
+        $orderItems = $this->sortOrderItems($result, $orderItems, $tableNumber, $orderId);
+
+        return $orderItems;
+    }
+
+    //Convert results from select procedure VIEW ORDER ITEMS into orderItem objects. Store objects into output array
+    public function sortOrderItems($theResult, $itemArray, $tableNum, $order)
+    {
+        if($theResult)//If there are any results returned from procedure
         {
-            foreach($result as $row)
+            foreach($theResult as $row)
             {
                 $theOrderItem = new orderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
-                $thePrice = $this->calculateTotalPriceForEachItem($tableNumber, $orderId, $theOrderItem->getId()); //Get calculated price
+                $thePrice = $this->calculateTotalPriceForEachItem($tableNum, $order, $theOrderItem->getId()); //Get calculated price
                 $theOrderItem->setTotalItemPrice($thePrice);//Save to object
-                $orderItems[] = $theOrderItem;//Store object
+                $itemArray[] = $theOrderItem;//Store object
 
             }
         }
-
-        return $orderItems;
+        return $itemArray;
     }
 
     //Returns calculated cost of item * quantity
@@ -182,6 +189,19 @@ class DB_Context
         $sql = "CALL ISAD251_STong.Tearoom_Confirm_Order(".$tableNumber.",".$orderId.")";
         $this->executeStatementNoOutput($sql);
     }
+
+    public function viewConfirmedOrderItems($tableNumber, $orderId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_View_Confirmed_Order_Items(".$tableNumber.",".$orderId.")";
+        $items = $this->executeStatement($sql);
+
+        $orderItems = [];
+        $orderItems = $this->sortOrderItems($items, $orderItems, $tableNumber, $orderId);
+
+        return $orderItems;
+    }
+
+
 
 
 }

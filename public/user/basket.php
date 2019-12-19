@@ -8,6 +8,7 @@ session_start();
 include_once  'user_nav.php';
 include_once '../header.php';
 include_once '../../src/model/DB_Context.php';
+include_once '../../src/controller/showBasket.php';
 ?>
 <head>
 
@@ -34,7 +35,6 @@ include_once '../../src/model/DB_Context.php';
     <?php
         $breakLine="";
         $db = new DB_Context();
-
         $currentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']);
 
         if($currentItems)
