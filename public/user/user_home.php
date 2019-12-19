@@ -7,6 +7,7 @@ include_once  'user_nav.php';
 include_once '../header.php';
 include_once  '../../src/model/DB_Context.php';
 include_once  '../../src/model/order.php';
+include_once '../../src/controller/showBasket.php';
 
 if(isset ($_POST['tableNumber']))
 {
