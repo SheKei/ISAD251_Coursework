@@ -182,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575905463605</updated>
       <workItem from="1575905464831" duration="23412000" />
-      <workItem from="1576671442961" duration="5733000" />
+      <workItem from="1576671442961" duration="6318000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -216,7 +216,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29145000" />
+    <option name="totallyTimeSpent" value="29730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
