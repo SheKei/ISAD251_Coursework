@@ -35,31 +35,9 @@ include_once '../../src/controller/showBasket.php';
     <?php
         $breakLine="";
         $db = new DB_Context();
-        $currentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']);
+        $theCurrentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']);
 
-        if($currentItems)
-        {
-            foreach($currentItems as $currentItem)
-            {
-                $itemName = $currentItem->getName();
-                $price = " Individual Price: £".$currentItem->getSinglePrice();
-                $amount = "Quantity: ".$currentItem->getAmount();
-                $totalItemPrice = "Total Price: £".$currentItem->getTotalItemPrice();
-
-                $displayString = "<p>".$itemName."  ".$price."  ".$amount."  ".$totalItemPrice."</p>";
-                $breakLine = "<br>";
-
-                echo $displayString;
-                echo $breakLine;
-            }
-        }
-
-        echo $breakLine;
-        $orderCost = "TOTAL ORDER PRICE: £".$db->calculateTotalOrderPrice($_SESSION['tableNum'], $_SESSION['id']);
-        $displayPrice = "<p>".$orderCost."</p>";
-
-        echo $displayPrice;
-        echo $breakLine;
+        showOutput($theCurrentItems, $db);
 
 
 

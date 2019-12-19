@@ -10,7 +10,9 @@ BEGIN
     WHERE
     table_number = tableNumber
     AND
-    order_id = orderId;
+    order_id = orderId
+    AND
+    order_status = "Confirmed - Ongoing";
 	
 END //
 DELIMITER;

@@ -57,7 +57,11 @@ else
 
             $db = new DB_Context();
             $confirmedItems = $db->viewConfirmedOrderItems($_SESSION['tableNum'], $_SESSION['id']);
-            showOutput($confirmedItems, $db);
+            if($confirmedItems)
+            {
+                showOutput($confirmedItems, $db);
+            }
+
 
         ?>
 
