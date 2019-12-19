@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 include_once  'user_nav.php';
 include_once '../header.php';
 include_once  '../../src/model/DB_Context.php';
@@ -15,7 +19,8 @@ if(isset ($_POST['tableNumber']))
 
     $order = new order($_POST['tableNumber'], $orderId);    //Save to object
 
-    $output = $order;
+    $_SESSION['tableNum'] = $order->getTableNum();
+    $_SESSION['id'] = $order->getOrderId();
 }
 else
 {
@@ -47,7 +52,7 @@ else
 
     <div class="container">
         <div class="col-lg-12 text-center">
-            <h2>Welcome! Your Table Number is <?php echo $output->getTableNum() ?> </h2>
+            <h2>Welcome! Your Table Number is <?php echo $_SESSION['tableNum'] ?> </h2>
         </div>
     </div>
 

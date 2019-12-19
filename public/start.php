@@ -1,5 +1,15 @@
 <?php
+session_start();
+?>
+
+<?php
 include_once 'header.php';
+
+// remove table number and order id variable
+session_unset();
+// destroy the session
+session_destroy();
+
 ?>
 
     <!DOCTYPE html>

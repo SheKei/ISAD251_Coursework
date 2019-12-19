@@ -40,7 +40,8 @@
         </ul>
 
         <ul class="nav navbar-nav  ml-auto">
-            <button type="button" style="font-size: 20px; color: black;" class="btn btn-warning"><a href="../start.php">Leave</a></button>
+            <button name = "leaveBtn" type="button" style="font-size: 20px; color: black;" class="btn btn-warning"><a href="../start.php">Leave</a></button>
+
         </ul>
 
 </nav>
