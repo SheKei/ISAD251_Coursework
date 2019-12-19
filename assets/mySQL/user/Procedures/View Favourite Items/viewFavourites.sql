@@ -11,7 +11,8 @@ BEGIN
 	WHERE
 	table_number = tableNumber
 	AND
-	tearoom_favourite.item_id = tearoom_item.item_id;
+	tearoom_favourite.item_id = tearoom_item.item_id
+	GROUP BY tearoom_favourite.item_id;
     
 END //
 DELIMITER;

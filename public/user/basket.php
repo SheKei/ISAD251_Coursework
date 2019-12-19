@@ -35,7 +35,7 @@ include_once '../../src/controller/showBasket.php';
     <?php
         $breakLine="";
         $db = new DB_Context();
-        $theCurrentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']);
+        $theCurrentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']); //Return with an array of items
 
         showOutput($theCurrentItems, $db);
 

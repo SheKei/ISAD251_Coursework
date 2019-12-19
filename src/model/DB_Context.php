@@ -2,6 +2,7 @@
 include_once 'menuItem.php';
 include_once 'item.php';
 include_once 'orderItem.php';
+include_once 'favItem.php';
 
 class DB_Context
 {
@@ -190,6 +191,7 @@ class DB_Context
         $this->executeStatementNoOutput($sql);
     }
 
+    //View items in current confirmed orders
     public function viewConfirmedOrderItems($tableNumber, $orderId)
     {
         $sql = "CALL ISAD251_STong.Tearoom_View_Confirmed_Order_Items(".$tableNumber.",".$orderId.")";
@@ -199,6 +201,26 @@ class DB_Context
         $orderItems = $this->sortOrderItems($items, $orderItems, $tableNumber, $orderId);
 
         return $orderItems;
+    }
+
+    //Returns a list of items that have been favourited and how many times they have been favourited.
+    public function viewFavouriteItems($tableNumber)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_View_Favourites(".$tableNumber.")";
+        $items = $this->executeStatement($sql);
+
+        $favourites = [];
+
+        if($items)
+        {
+            foreach($items as $row)
+            {
+                $fav = new favItem($row['numberOfLikes'],$row['name'],$row['item_id']);
+                $favourites[] = $fav;
+            }
+        }
+
+        return $favourites;
     }
 
 

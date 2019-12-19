@@ -63,9 +63,6 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
         {
             $displayString = "";
 
-            //$db = new DB_Context();
-            //$menuItems = $db->showMenu($sql);
-
             foreach($menuItems as $menuItem)
             {
                 $displayString = "<p><a href='viewItem.php?object=".$menuItem->getId()."'>".$menuItem->getName()."</a>- £".$menuItem->getPrice()."</p>";
