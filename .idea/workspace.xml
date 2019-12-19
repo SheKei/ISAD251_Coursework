@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="Readjusted navigation bar">
       <change beforePath="$PROJECT_DIR$/public/user/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DB_Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DB_Context.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/orderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/orderItem.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +15,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/user/menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-527">
+            <state relative-caret-position="-323">
               <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="46" />
             </state>
           </provider>
@@ -26,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/user/basket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="641">
+              <caret line="63" column="69" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -181,7 +179,7 @@
       <updated>1575905463605</updated>
       <workItem from="1575905464831" duration="23412000" />
       <workItem from="1576671442961" duration="6318000" />
-      <workItem from="1576757936083" duration="12961000" />
+      <workItem from="1576757936083" duration="14231000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -215,7 +213,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42691000" />
+    <option name="totallyTimeSpent" value="43961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -354,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/user/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -375,10 +366,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/user/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/user/basket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="641">
+          <caret line="63" column="69" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
         </state>
       </provider>
     </entry>

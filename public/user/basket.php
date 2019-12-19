@@ -59,6 +59,12 @@ include_once '../../src/model/DB_Context.php';
 
 </div>
 
+<div class="container">
+    <form action="" method="POST">
+        <input type="submit" name="confirmBtn" value="Confirm Order">
+    </form>
+</div>
+
 
 
 </body>
