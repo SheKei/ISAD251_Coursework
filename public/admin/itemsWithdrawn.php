@@ -6,24 +6,21 @@ include_once 'adminNavBar.php';
 include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 include_once '../../srcADMIN/modelADMIN/previewItems.php';
 include_once '../../srcADMIN/controllerADMIN/itemsOutput.php';
-
 ?>
 
 <head>
 
-
     <style>
 
-    h1{
-        font-size: 65px;
-    }
+        h1
+        {
+            font-size: 65px;
+        }
 
-    h1,h3
-    {font-family: "Century Schoolbook";}
+        h1,h3
+        {font-family: "Century Schoolbook";}
 
-
-    p{font-size: 20px}
-
+        p{font-size: 20px}
 
     </style>
 
@@ -31,15 +28,13 @@ include_once '../../srcADMIN/controllerADMIN/itemsOutput.php';
 
 <body>
 
-    <h1 class="text-center">ALL ITEMS</h1>
+<h1 class="text-center">WITHDRAWN ITEMS</h1>
 
-    <?php
+<?php
 
-    $firstStatus="Sale";
-    $secondStatus="Withdrawn";
+    $firstStatus = "Withdrawn";
+    displayItems($firstStatus, $firstStatus); //Get and display only withdrawn items
 
-    displayItems($firstStatus, $secondStatus); //Get both sale and withdrawn items
-
-    ?>
+?>
 
 </body>

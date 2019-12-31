@@ -26,8 +26,8 @@ include_once 'adminNavBar.php';
         <h1 class="text-center">Items</h1>
         <br>
         <button type="button"class="btn btn-default btn-lg btn-block"><a href="itemsAll.php">ALL ITEMS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">WITHDRAWN ITEMS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">SALE ITEMS</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><a href="itemsWithdrawn.php">WITHDRAWN ITEMS</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><a href="itemsSale.php">SALE ITEMS</button>
         <button type="button" class="btn btn-default btn-lg btn-block">ADD NEW ITEM</button>
     </div>
 </div>

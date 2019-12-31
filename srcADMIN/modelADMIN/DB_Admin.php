@@ -47,10 +47,10 @@ class DB_Admin
         return $theResult;
     }
 
-    //Retrieve all items both on sale or withdrawn, drinks and cakes
-    public function getAllItems()
+    //Retrieve items depending on whether user wants sale, withdrawn or both statuses items
+    public function getAllItems($status1, $status2)
     {
-        $sql = "SELECT * FROM isad251_stong.tearoom_item";
+        $sql = "CALL ISAD251_STong.TeaAdmin_Get_Items('".$status1."','".$status2."')";
         $result = $this->executeStatement($sql);
 
         $allItems = [];

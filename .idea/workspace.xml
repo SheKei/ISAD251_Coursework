@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="Readjusted navigation bar">
-      <change afterPath="$PROJECT_DIR$/public/admin/adminHome.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/adminNavBar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/itemEdit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/itemsAll.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin/itemsHome.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcADMIN/modelADMIN/previewItems.php" afterDir="false" />
+    <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/admin/itemsSale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/itemsWithdrawn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/srcADMIN/controllerADMIN/itemsOutput.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/DB_Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DB_Context.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/item.php" beforeDir="false" afterPath="$PROJECT_DIR$/srcADMIN/modelADMIN/item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/itemsAll.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/itemsAll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/itemsHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/itemsHome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,46 +19,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/user/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="67" column="118" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="283">
+              <caret line="49" column="91" selection-start-line="49" selection-start-column="91" selection-end-line="49" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/user/viewItem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/itemsHome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" lean-forward="true" selection-end-line="38" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/admin/itemsAll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -69,8 +39,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/admin/itemEdit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="323">
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcADMIN/controllerADMIN/itemsOutput.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/admin/itemsWithdrawn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/admin/itemsSale.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/admin/itemsHome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="29" column="93" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -108,12 +123,16 @@
         <option value="$PROJECT_DIR$/public/user/favourites.php" />
         <option value="$PROJECT_DIR$/public/admin/adminHome.php" />
         <option value="$PROJECT_DIR$/public/admin/adminNavBar.php" />
-        <option value="$PROJECT_DIR$/public/admin/itemsHome.php" />
         <option value="$PROJECT_DIR$/srcADMIN/controllerADMIN/previewItems.php" />
-        <option value="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" />
         <option value="$PROJECT_DIR$/src/model/DB_Context.php" />
         <option value="$PROJECT_DIR$/public/admin/itemEdit.php" />
+        <option value="$PROJECT_DIR$/src/controller/itemsOutput.php" />
+        <option value="$PROJECT_DIR$/srcADMIN/controllerADMIN/itemsOutput.php" />
+        <option value="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" />
+        <option value="$PROJECT_DIR$/public/admin/itemsHome.php" />
         <option value="$PROJECT_DIR$/public/admin/itemsAll.php" />
+        <option value="$PROJECT_DIR$/public/admin/itemsSale.php" />
+        <option value="$PROJECT_DIR$/public/admin/itemsWithdrawn.php" />
       </list>
     </option>
   </component>
@@ -167,12 +186,24 @@
               <item name="ISAD251_Coursework" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISAD251_Coursework" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ISAD251_Coursework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ISAD251_Coursework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISAD251_Coursework" type="b2602c69:ProjectViewProjectNode" />
               <item name="ISAD251_Coursework" type="462c0819:PsiDirectoryNode" />
               <item name="srcADMIN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ISAD251_Coursework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ISAD251_Coursework" type="462c0819:PsiDirectoryNode" />
+              <item name="srcADMIN" type="462c0819:PsiDirectoryNode" />
+              <item name="controllerADMIN" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ISAD251_Coursework" type="b2602c69:ProjectViewProjectNode" />
@@ -192,8 +223,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ISAD251_Coursework\srcADMIN\modelADMIN" />
       <recent name="C:\wamp64\www\ISAD251_Coursework\srcADMIN\controllerADMIN" />
+      <recent name="C:\wamp64\www\ISAD251_Coursework\srcADMIN\modelADMIN" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -222,7 +253,7 @@
       <workItem from="1576671442961" duration="6318000" />
       <workItem from="1576757936083" duration="23024000" />
       <workItem from="1576840521705" duration="639000" />
-      <workItem from="1577796543437" duration="5831000" />
+      <workItem from="1577796543437" duration="7814000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -252,17 +283,24 @@
       <option name="project" value="LOCAL" />
       <updated>1576675067066</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added admin functionality to view all items whether withdrawn/sale , cake/drink">
+      <created>1577802463988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577802463989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59224000" />
+    <option name="totallyTimeSpent" value="61207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456376" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18456376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,7 +321,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -312,7 +350,8 @@
     <MESSAGE value="Removed inheritance of menu item and item due to misunderstanding of inherited methods and fixed output bug where nothing was being displayed." />
     <MESSAGE value="Readjusted menu controller, menu view and showMenu model interactions. Created page to view details of an item clicked on from menu page by passing through the id to viewItem.php and passing it through procedure to recall details because passing it as a whole object caused an error." />
     <MESSAGE value="Readjusted customer navigation bar to look more tidier. Added nav bar to all appropiate customer pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readjusted customer navigation bar to look more tidier. Added nav bar to all appropiate customer pages" />
+    <MESSAGE value="Added admin functionality to view all items whether withdrawn/sale , cake/drink" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin functionality to view all items whether withdrawn/sale , cake/drink" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/user/item.php" />
@@ -436,31 +475,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/user/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="67" column="118" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcADMIN/modelADMIN/item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/user/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -471,24 +496,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="49" column="91" selection-start-line="49" selection-start-column="91" selection-end-line="49" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/itemsHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="426">
+          <caret line="29" column="93" selection-start-line="29" selection-start-column="93" selection-end-line="29" selection-end-column="93" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/itemEdit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="323">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcADMIN/controllerADMIN/itemsOutput.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/itemsAll.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/itemsSale.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/itemsWithdrawn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
