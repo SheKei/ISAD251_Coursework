@@ -1,6 +1,5 @@
 <?php
 include_once 'menuItem.php';
-include_once 'item.php';
 include_once 'orderItem.php';
 include_once 'favItem.php';
 
