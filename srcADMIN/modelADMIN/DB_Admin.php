@@ -47,6 +47,14 @@ class DB_Admin
         return $theResult;
     }
 
+    //Same function but nothing is being returned as output - i.e INSERT/DELETE/UPDATE statements
+    public function executeStatementNoOutput($sqlStatement)
+    {
+        $sqlStatement = $this->connection->prepare($sqlStatement);
+
+        $sqlStatement->execute();
+    }
+
     //Retrieve items depending on whether user wants sale, withdrawn or both statuses items
     public function getAllItems($status1, $status2)
     {
@@ -67,5 +75,12 @@ class DB_Admin
 
         return $allItems;
 
+    }
+
+    //Insert new item into item table once user passes all validation checks
+    public function addItem($itemName, $buy, $sell,$category, $stock, $restock, $veg, $vegan, $nutFree,  $img, $itemStatus)
+    {
+        $sql = "CALL ISAD251_STong.TeaAdmin_Add_Item('".$itemName."',".$buy.",".$sell.",'".$category."',".$stock.",".$restock.",".$veg.",".$vegan.",".$nutFree.",'".$img."','".$itemStatus."')";
+        $this->executeStatementNoOutput($sql);
     }
 }
