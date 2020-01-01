@@ -77,9 +77,6 @@ function outputDetails($itemId)
         $aContainer = "<div class='col-lg-6 text-left'>";
 
         $editButton = "<button type='button'><a href='itemEdit.php?object=".$item->getId()."'>"."EDIT ITEM"."</a></button>";
-        $statusButton = "<input type='submit' name='btnStatus' value='".$buttonName."'>";
-        $form = "<form action='itemsHome.php' action='post'>";
-        $endForm ="</form>";
 
         $statusButton = "<button type='button'><a href='../../srcADMIN/controllerADMIN/changeStatus.php?object=".$item->getId()."&status=".$item->getItemStatus()."'>".$buttonName."</a></button>";
 

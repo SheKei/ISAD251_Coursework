@@ -110,4 +110,12 @@ class DB_Admin
         $this->executeStatementNoOutput($sql);
 
     }
+
+    //Save changes made to an item's attributes - no output
+    public function saveChangedItem($id,$name, $buy, $sell, $category, $stock, $restock, $vegan, $veg, $nutFree)
+    {
+        $sql = "CALL ISAD251_STong.TeaAdmin_Update_Item(".$id.",'".$name."',".$buy.",".$sell.",'".$category."',".$stock.",".$restock.",".$vegan.",".$veg.",".$nutFree.")";
+        $this->executeStatementNoOutput($sql);
+
+    }
 }

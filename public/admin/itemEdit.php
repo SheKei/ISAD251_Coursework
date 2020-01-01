@@ -3,6 +3,7 @@
 <?php
 include_once '../header_admin.php';
 include_once 'adminNavBar.php';
+include_once '../../srcADMIN/controllerADMIN/itemEditOutput.php';
 ?>
 
 <head>
@@ -11,9 +12,9 @@ include_once 'adminNavBar.php';
 
     <style>
 
-        h1
+        .text-center
         {
-            font-size: 45px;
+            font-size: 25px;
             font-family: "Century Schoolbook";
         }
 
@@ -22,6 +23,16 @@ include_once 'adminNavBar.php';
 </head>
 
 <body>
+
+<?php
+
+if(isset($_GET['object']))
+{
+    $id = $_GET['object'];
+
+    displayFieldsToEdit($id);
+}
+?>
 
 
 
