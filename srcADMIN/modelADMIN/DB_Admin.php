@@ -6,6 +6,7 @@
  * Time: 13:17
  */
 include_once 'previewItems.php';
+include_once 'item.php';
 
 class DB_Admin
 {
@@ -77,10 +78,36 @@ class DB_Admin
 
     }
 
+    public function viewItemDetails($itemId)
+    {
+        $sql = "CALL isad251_stong.TeaAdmin_Get_Item_Details(".$itemId.")";
+        $result = $this->executeStatement($sql);
+        $item ="";
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $item = new item( $row['item_id'],$row['name'], $row['buying_cost'], $row['selling_price'], $row['category'], $row['quantity'], $row['min_reorder_amount'], $row['vegan'], $row['vegetarian'], $row['nut_free'], $row['img_path'], $row['item_status']);
+            }
+        }
+
+        return $item;
+
+    }
+
     //Insert new item into item table once user passes all validation checks
     public function addItem($itemName, $buy, $sell,$category, $stock, $restock, $veg, $vegan, $nutFree,  $img, $itemStatus)
     {
         $sql = "CALL ISAD251_STong.TeaAdmin_Add_Item('".$itemName."',".$buy.",".$sell.",'".$category."',".$stock.",".$restock.",".$veg.",".$vegan.",".$nutFree.",'".$img."','".$itemStatus."')";
         $this->executeStatementNoOutput($sql);
+    }
+
+    //Change a status of an output, returns no output
+    public function changeItemStatus($itemId, $newStatus)
+    {
+        $sql = "CALL ISAD251_STong.TeaAdmin_Change_Item_Status(".$itemId.",'".$newStatus."')";
+        $this->executeStatementNoOutput($sql);
+
     }
 }

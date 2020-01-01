@@ -16,7 +16,7 @@ function displayItems($status1, $status2)
             $id = $anItem->getId();
             $name = $anItem->getName();
 
-            $link = "<p>"."<a href='itemEdit.php?object=".$id."'>"."<h3><strong> Item ID: ".$id." - ".$name."</strong></h3>"."</a></p>";
+            $link = "<p>"."<a href='itemView.php?object=".$id."'>"."<h3><strong> Item ID: ".$id." - ".$name."</strong></h3>"."</a></p>";
 
             $category = "Item Category: ".$anItem->getCategory();
             $status = "Item Status: ".$anItem->getItemStatus();
