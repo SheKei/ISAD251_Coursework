@@ -133,14 +133,14 @@ class DB_Context
         return $orderItems;
     }
 
-    //Convert results from select procedure VIEW ORDER ITEMS into orderItem objects. Store objects into output array
+    //Convert results from select procedure VIEW ORDER ITEMS into ongoingOrderItem objects. Store objects into output array
     public function sortOrderItems($theResult, $itemArray, $tableNum, $order)
     {
         if($theResult)//If there are any results returned from procedure
         {
             foreach($theResult as $row)
             {
-                $theOrderItem = new orderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
+                $theOrderItem = new ongoingOrderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
                 $thePrice = $this->calculateTotalPriceForEachItem($tableNum, $order, $theOrderItem->getId()); //Get calculated price
                 $theOrderItem->setTotalItemPrice($thePrice);//Save to object
                 $itemArray[] = $theOrderItem;//Store object

@@ -7,6 +7,8 @@
  */
 include_once 'previewItems.php';
 include_once 'item.php';
+include_once 'order.php';
+include_once 'ongoingOrderItem.php';
 
 class DB_Admin
 {
@@ -54,6 +56,26 @@ class DB_Admin
         $sqlStatement = $this->connection->prepare($sqlStatement);
 
         $sqlStatement->execute();
+    }
+
+    //Return result set from a SELECT ALL statement from a table
+    public function getAllApi($theTableName)
+    {
+        $sql = "SELECT * FROM";
+
+        switch ($theTableName)
+        {
+            case "tearoom_item" : $sql = $sql." ISAD251_STONG".".tearoom_item";
+                break;
+            case "tearoom_order" : $sql = $sql." ISAD251_STONG".".tearoom_order";
+                break;
+        }
+
+        $sqlStatement = $this->connection->prepare($sql);
+        $sqlStatement->execute();
+        $outputSet = $sqlStatement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $outputSet;
     }
 
     //Retrieve items depending on whether user wants sale, withdrawn or both statuses items
@@ -115,6 +137,60 @@ class DB_Admin
     public function saveChangedItem($id,$name, $buy, $sell, $category, $stock, $restock, $vegan, $veg, $nutFree)
     {
         $sql = "CALL ISAD251_STong.TeaAdmin_Update_Item(".$id.",'".$name."',".$buy.",".$sell.",'".$category."',".$stock.",".$restock.",".$vegan.",".$veg.",".$nutFree.")";
+        $this->executeStatementNoOutput($sql);
+
+    }
+
+    //Return array of ongoing orders using a VIEW statement
+    public function getAllOngoingOrders()
+    {
+        $sql = "SELECT * FROM ISAD251_STong.Tea_Admin_Ongoing_Orders";
+        $result = $this->executeStatement($sql);
+
+        $allOrders = [];
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $theOrder = new order( $row['table_number'],$row['order_id'], $row['order_date']);
+                $allOrders[] = $theOrder;//Store object
+            }
+        }
+
+        return $allOrders;
+
+    }
+
+    //Return all ordered items of an order id
+    public function viewOrderItems($orderId)
+    {
+        $sql = "CALL ISAD251_STong.TeaAdmin_View_Order_Items(".$orderId.")";
+
+        $result = $this->executeStatement($sql);
+
+        $allOrderItems = [];
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+
+                $orderItem = new ongoingOrderItem( $row['item_id'], $row['name'], $row['order_quantity']);
+
+                $allOrderItems[] = $orderItem;//Store object
+            }
+        }
+
+        return $allOrderItems;
+
+
+    }
+
+    //Change status of an order to "Delivered"
+    public function deliverOrder($orderId)
+    {
+        $sql = "CALL ISAD251_STong.TeaAdmin_Deliver_Order(".$orderId.")";
         $this->executeStatementNoOutput($sql);
 
     }

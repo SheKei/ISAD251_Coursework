@@ -20,16 +20,16 @@
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
         <div class="w3-col s3">
-            <a href="#" class="w3-button w3-block w3-black">HOME</a>
+            <a href="adminHome.php" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s3">
             <a href="itemsHome.php" class="w3-button w3-block w3-black">ITEMS</a>
         </div>
         <div class="w3-col s3">
-            <a href="#Orders" class="w3-button w3-block w3-black">ORDERS</a>
+            <a href="ongoingOrders.php" class="w3-button w3-block w3-black">ORDERS</a>
         </div>
         <div class="w3-col s3">
-            <a href="#Reports" class="w3-button w3-block w3-black">REPORTS</a>
+            <a href="reportsHome.php" class="w3-button w3-block w3-black">REPORTS</a>
         </div>
     </div>
 </div>

@@ -8,11 +8,11 @@
 
 include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
-getStatus();
+getStatus(); //Change the status of an item
 
 function getStatus()
 {
-
+    //If object Id and object status were passed in from previous page of all items
     if(isset($_GET['object']) && isset($_GET['status']) )
     {
         $db = new DB_Admin();

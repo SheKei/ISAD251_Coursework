@@ -14,7 +14,7 @@ include_once 'adminNavBar.php';
 
         h1
         {
-            font-size: 45px;
+            font-size: 55px;
             font-family: "Century Schoolbook";
         }
 
