@@ -92,6 +92,27 @@ class DB_Context
         return $item;
     }
 
+    public function checkOrder($tableNumber, $orderId, $itemId, $orderAmount)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Check_Order(".$orderId.")"; //find if current order has status of not 'ordering'
+        $result= $this->executeStatement($sql);
+        $newNumber = 0;
+
+        if($result)//Current order is either confirmed or delivered so make a new order id
+        {
+
+            echo "no ordering order";
+            $newNumber = $this->insertNewOrder($tableNumber); //Get another order for user to order items from
+        }
+        else //Current order is ordering so Continue adding items to current order
+        {
+            echo "continue normal";
+            $this->insertNewOrderItem($tableNumber, $itemId, $orderAmount, $orderId);
+        }
+
+        return $newNumber;
+    }
+
     //Insert order with status = ordering when user selects their table number
     //Return the order id of new order
     public function insertNewOrder($tableNumber)

@@ -25,7 +25,16 @@ else{                                       //If order button was pressed and pa
 if(isset($_POST['orderBtn']))               //If order button was pressed, insert order item
 {
     $db = new DB_Context();
-    $db->insertNewOrderItem($_SESSION['tableNum'],$_SESSION['tempItem'], $_POST['quantity'],$_SESSION['id'] );
+
+    $possibleNewId = $db->checkOrder($_SESSION['tableNum'],$_SESSION['id'] ,$_SESSION['tempItem'], $_POST['quantity']);
+
+    if($possibleNewId != 0) //If a new order had to be made because current had already been confirmed
+    {
+        $_SESSION['id'] = $possibleNewId; //Update global variable
+
+    }
+
+    //$db->insertNewOrderItem($_SESSION['tableNum'],$_SESSION['tempItem'], $_POST['quantity'],$_SESSION['id'] );
 
 }
 

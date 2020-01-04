@@ -16,18 +16,10 @@ if(isset ($_POST['tableNumber']))
     //return the order id generated for this order
     $orderId = $db->insertNewOrder($_POST['tableNumber']);  //Create new order for selected table number
 
-    $order = new order($_POST['tableNumber'], $orderId);    //Save to object
+    //$order = new order($_POST['tableNumber'], $orderId);    //Save to object
 
-    $_SESSION['tableNum'] = $order->getTableNum();
-    $_SESSION['id'] = $order->getOrderId();
-}
-else
-{
-    $tableNum = "NOT SELECTED. GO BACK AND CHOOSE TABLE NUMBER";
-    $orderNum = 0;
-    $noOrder = new order($tableNum, $orderNum);
-
-    $output = $noOrder;
+    $_SESSION['tableNum'] = $_POST['tableNumber']; //Save as global var
+    $_SESSION['id'] = $orderId;
 }
 
 ?>
@@ -56,6 +48,7 @@ else
 
         <?php
 
+            //VIEW ONLY THE MOST RECENT ORDER OF ONGOING AND DELIVERED
             $db = new DB_Context();
 
             $status1 = "Confirmed - Ongoing";
