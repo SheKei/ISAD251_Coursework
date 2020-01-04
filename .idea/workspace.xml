@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/mySQL/User/Procedures/Ordering Procedures/viewOrder.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/mySQL/User/Procedures/Ordering Procedures/viewOrder.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/mySQL/User/Procedures/deleteOrderItem.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/mySQL/User/Procedures/deleteOrderItem.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/user_home.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/user_home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/cancel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/showBasket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/showBasket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/DB_Context.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DB_Context.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/orderItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/orderItem.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +17,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/showBasket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1625">
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/user/basket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/displayItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="148">
               <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
@@ -31,50 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/showBasket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/user/basket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/srcADMIN/controllerADMIN/createItem.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="53" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/cancel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+            <state relative-caret-position="575">
+              <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -82,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3374">
-              <caret line="166" column="53" selection-start-line="166" selection-start-column="53" selection-end-line="166" selection-end-column="53" />
+            <state relative-caret-position="402">
+              <caret line="196" column="46" lean-forward="true" selection-start-line="196" selection-start-column="46" selection-end-line="196" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -142,17 +130,17 @@
         <option value="$PROJECT_DIR$/srcADMIN/modelADMIN/DB_Admin.php" />
         <option value="$PROJECT_DIR$/public/user/menu.php" />
         <option value="$PROJECT_DIR$/public/user/viewItem.php" />
-        <option value="$PROJECT_DIR$/public/user/user_home.php" />
         <option value="$PROJECT_DIR$/src/model/favItem.php" />
         <option value="$PROJECT_DIR$/src/controller/displayItem.php" />
         <option value="$PROJECT_DIR$/src/controller/menuFilter.php" />
         <option value="$PROJECT_DIR$/src/controller/favouriteItems.php" />
         <option value="$PROJECT_DIR$/public/user/favourites.php" />
         <option value="$PROJECT_DIR$/src/model/orderItem.php" />
+        <option value="$PROJECT_DIR$/public/user/basket.php" />
+        <option value="$PROJECT_DIR$/public/user/user_home.php" />
         <option value="$PROJECT_DIR$/src/controller/showBasket.php" />
         <option value="$PROJECT_DIR$/src/model/DB_Context.php" />
         <option value="$PROJECT_DIR$/src/controller/cancel.php" />
-        <option value="$PROJECT_DIR$/public/user/basket.php" />
       </list>
     </option>
   </component>
@@ -253,7 +241,7 @@
       <workItem from="1577796543437" duration="22568000" />
       <workItem from="1577906249900" duration="8454000" />
       <workItem from="1578076970611" duration="8857000" />
-      <workItem from="1578136678577" duration="13816000" />
+      <workItem from="1578136678577" duration="14653000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -318,11 +306,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577911993664</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added user functionality to cancel an order item in basket">
+      <created>1578157491056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578157491056</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107088000" />
+    <option name="totallyTimeSpent" value="107925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -383,7 +378,8 @@
     <MESSAGE value="Admin functionality to add a new item added" />
     <MESSAGE value="Change status of an item through a button after viewing all details of an item (but not edit the details)" />
     <MESSAGE value="Save changes on an editted item added as Admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save changes on an editted item added as Admin" />
+    <MESSAGE value="Added user functionality to cancel an order item in basket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added user functionality to cancel an order item in basket" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/user/item.php" />
@@ -685,23 +681,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcADMIN/controllerADMIN/createItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="53" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="374">
+          <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/DB_Context.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3374">
-          <caret line="166" column="53" selection-start-line="166" selection-start-column="53" selection-end-line="166" selection-end-column="53" />
+        <state relative-caret-position="402">
+          <caret line="196" column="46" lean-forward="true" selection-start-line="196" selection-start-column="46" selection-end-line="196" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/displayItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="148">
           <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
@@ -711,32 +714,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/showBasket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="1625">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/cancel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcADMIN/controllerADMIN/createItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="53" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/user/basket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        <state relative-caret-position="357">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/cancel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
         </state>
       </provider>
     </entry>

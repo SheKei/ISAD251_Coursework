@@ -191,6 +191,12 @@ class DB_Context
 
     }
 
+    public function cancelOngoingOrder($orderId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Cancel_Order(".$orderId.")";
+        $this->executeStatementNoOutput($sql);
+    }
+
 
 
 

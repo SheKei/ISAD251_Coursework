@@ -62,14 +62,14 @@ else
             $confirmedItems = $db->viewOrders($_SESSION['tableNum'], $_SESSION['id'], $status1);
             if($confirmedItems)
             {
-                showConfirmedItems($confirmedItems);
+                showConfirmedItems($confirmedItems, $status1);
             }
 
             $status2 = "Delivered";
             $deliveredItems = $db->viewOrders($_SESSION['tableNum'], $_SESSION['id'], $status2);
             if($deliveredItems)
             {
-                showConfirmedItems($deliveredItems);
+                showConfirmedItems($deliveredItems, $status2);
             }
 
 

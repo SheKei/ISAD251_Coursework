@@ -37,7 +37,9 @@ function showOutput($currentItems)
 
 }
 
-function showConfirmedItems($items)
+
+//Show order items that have been confirmed
+function showConfirmedItems($items, $orderType)
 {
     if($items)
     {
@@ -57,6 +59,12 @@ function showConfirmedItems($items)
                 echo $orderStatus;
                 echo $orderId;
                 $once = 2;
+
+                if($orderType == "Confirmed - Ongoing")
+                {
+                    $cancelButton = "<button type='button'><a href='../../src/controller/cancel.php?orderId=".$item->getOrderId()."'>CANCEL ORDER</a></button>";
+                    echo $cancelButton;
+                }
             }
 
             $totalOrderPrice = (float)$totalOrderPrice + (float)$item->getTotalItemPrice();
@@ -75,6 +83,11 @@ function showConfirmedItems($items)
 
         $totalOrder = "<p><Strong>Total Order Price:</Strong> £".(float)$totalOrderPrice."</p><br><br>";
         echo $totalOrder;
+
+
+
+
+
         echo "</div>";
 
     }
