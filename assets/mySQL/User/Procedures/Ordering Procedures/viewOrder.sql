@@ -5,6 +5,7 @@ BEGIN
     Tearoom_order.order_id,
     Tearoom_order.table_number,
 	tearoom_order.order_status,
+	tearoom_table_order.item_id,
 	Tearoom_item.name,
 	Tearoom_table_order.order_quantity,
 	Tearoom_item.selling_price,

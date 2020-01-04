@@ -11,16 +11,18 @@ class orderItem
     private $tableNumber;
     private $orderId;
     private $itemOrderStatus;
+    private $itemId;
     private $itemName;
     private $orderQuantity;
     private $singlePrice;
     private $totalPrice;//Set to zero first and then call another procedure to change value
 
-    public function __Construct($tableNum,$theOrderId, $status, $theItemName, $orderAmount, $price, $theTotalPrice)
+    public function __Construct($tableNum,$theOrderId, $status,$theItemId, $theItemName, $orderAmount, $price, $theTotalPrice)
     {
         $this->tableNumber = $tableNum;
         $this->orderId = $theOrderId;
         $this->itemOrderStatus = $status;
+        $this->itemId= $theItemId;
         $this->itemName = $theItemName;
         $this->orderQuantity = $orderAmount;
         $this->singlePrice = $price;
@@ -40,6 +42,11 @@ class orderItem
     public function getStatus()
     {
         return $this->itemOrderStatus;
+    }
+
+    public function getItemId()
+    {
+        return $this->itemId;
     }
 
     public function getName()

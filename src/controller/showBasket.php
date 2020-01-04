@@ -17,7 +17,9 @@ function showOutput($currentItems)
             $amount = "<Strong>Quantity:</Strong> ".$currentItem->getAmount();
             $totalItemPrice = "<Strong>Total Price:</Strong> £".$currentItem->getTotalItemPrice();
 
-            $displayString = "<p>".$itemName." --- ".$price." --- ".$amount." --- ".$totalItemPrice."</p>";
+            $cancelButton = "<button type='button'><a href='basket.php?objectId=".$currentItem->getItemId()."'>CANCEL ITEM</a></button>";
+
+            $displayString = "<p>".$itemName." --- ".$price." --- ".$amount." --- ".$totalItemPrice."-----".$cancelButton."</p>";
             $breakLine = "<br>";
 
             echo $displayString;

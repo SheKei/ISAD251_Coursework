@@ -147,7 +147,7 @@ class DB_Context
         {
             foreach($result as $row)
             {
-                $orderItem = new orderItem($row['table_number'], $row['order_id'],$row['order_status'], $row['name'], $row['order_quantity'], $row['selling_price'], $row['totalItemPrice']);
+                $orderItem = new orderItem($row['table_number'], $row['order_id'],$row['order_status'],$row['item_id'], $row['name'], $row['order_quantity'], $row['selling_price'], $row['totalItemPrice']);
                 $orderItems[] = $orderItem;
             }
         }
@@ -182,6 +182,13 @@ class DB_Context
         }
 
         return $favourites;
+    }
+
+    public function cancelOrderItem($tableNumber, $orderId, $itemId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Delete_Order_Item(".$tableNumber.",".$orderId.",".$itemId.")";
+        $this->executeStatementNoOutput($sql);
+
     }
 
 
