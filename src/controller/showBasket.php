@@ -60,13 +60,14 @@ function showConfirmedItems($items, $orderType)
                 echo $orderId;
                 $once = 2;
 
-                if($orderType == "Confirmed - Ongoing")
+                if($orderType == "Confirmed - Ongoing") //Cancel functionality only for orders that have not been delivered
                 {
                     $cancelButton = "<button type='button'><a href='../../src/controller/cancel.php?orderId=".$item->getOrderId()."'>CANCEL ORDER</a></button>";
                     echo $cancelButton;
                 }
             }
 
+            //Calculate total price from total item price
             $totalOrderPrice = (float)$totalOrderPrice + (float)$item->getTotalItemPrice();
 
             $itemName = "<p><Strong>Item Name:</Strong> ".$item->getName()."</p>";

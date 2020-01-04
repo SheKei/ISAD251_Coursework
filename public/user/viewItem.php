@@ -10,6 +10,7 @@ include_once '../header.php';
 include_once '../../src/model/menuItem.php';
 include_once '../../src/model/DB_Context.php';
 include_once '../../src/controller/displayItem.php';
+include_once '../../src/controller/favouriteItems.php';
 
 
 if(isset($_GET['object']))                  //If id of item was successfully passed from menu page
@@ -19,7 +20,6 @@ if(isset($_GET['object']))                  //If id of item was successfully pas
 }
 else{                                       //If order button was pressed and page refreshed
     displayObject($_SESSION['tempItem']);   //Display saved item
-
 }
 
 if(isset($_POST['orderBtn']))               //If order button was pressed, insert order item
@@ -27,6 +27,15 @@ if(isset($_POST['orderBtn']))               //If order button was pressed, inser
     $db = new DB_Context();
     $db->insertNewOrderItem($_SESSION['tableNum'],$_SESSION['tempItem'], $_POST['quantity'],$_SESSION['id'] );
 
+}
+
+if(isset($_GET['fav']) && isset($_GET['object'])) //If favourite button was pressed
+{
+    $table = $_SESSION['tableNum'];
+    $itemId = $_GET['object'];
+    addFavourtite($table, $itemId);
+    header("Location: viewItem.php?object=$itemId"); //Refresh page
+    exit();
 }
 
 

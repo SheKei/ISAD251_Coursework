@@ -1,5 +1,6 @@
 <?php
 
+//Display items that have been favourited by the current table they are sitting in
 function displayFavouriteItems($items)
 {
     if($items)
@@ -20,5 +21,11 @@ function displayFavouriteItems($items)
         echo $endRow = "</div>";
     }
 
+}
+
+function addFavourtite($tableNumber, $itemId)
+{
+    $db = new DB_Context();
+    $db->insertFav($tableNumber, $itemId);
 
 }

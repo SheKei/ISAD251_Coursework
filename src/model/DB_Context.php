@@ -184,6 +184,7 @@ class DB_Context
         return $favourites;
     }
 
+    //Cancel an order item in basket
     public function cancelOrderItem($tableNumber, $orderId, $itemId)
     {
         $sql = "CALL ISAD251_STong.Tearoom_Delete_Order_Item(".$tableNumber.",".$orderId.",".$itemId.")";
@@ -191,9 +192,16 @@ class DB_Context
 
     }
 
+    //Cancel an order that has been confirmed but not delivered
     public function cancelOngoingOrder($orderId)
     {
         $sql = "CALL ISAD251_STong.Tearoom_Cancel_Order(".$orderId.")";
+        $this->executeStatementNoOutput($sql);
+    }
+
+    public function insertFav($tableNum, $itemId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Insert_Fav(".$tableNum.",".$itemId.")";
         $this->executeStatementNoOutput($sql);
     }
 
