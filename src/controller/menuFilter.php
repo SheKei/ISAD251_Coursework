@@ -56,6 +56,15 @@ function filter()
 
 }
 
+//Get all items regardless of filter specs
+function getAllMenuItems()
+{
+    $db = new DB_Context();
+    $allItems = $db->showAllMenuItems();
+
+    return $allItems;
+}
+
 //Display the menu items after submitting filter
 function displayMenuItems($menuItems)
 {

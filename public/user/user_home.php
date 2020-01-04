@@ -6,7 +6,6 @@ session_start();
 include_once  'user_nav.php';
 include_once '../header.php';
 include_once  '../../src/model/DB_Context.php';
-include_once  '../../src/model/order.php';
 include_once '../../src/controller/showBasket.php';
 
 if(isset ($_POST['tableNumber']))
@@ -15,8 +14,6 @@ if(isset ($_POST['tableNumber']))
 
     //return the order id generated for this order
     $orderId = $db->insertNewOrder($_POST['tableNumber']);  //Create new order for selected table number
-
-    //$order = new order($_POST['tableNumber'], $orderId);    //Save to object
 
     $_SESSION['tableNum'] = $_POST['tableNumber']; //Save as global var
     $_SESSION['id'] = $orderId;

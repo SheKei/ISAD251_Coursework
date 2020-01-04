@@ -34,8 +34,6 @@ if(isset($_POST['orderBtn']))               //If order button was pressed, inser
 
     }
 
-    //$db->insertNewOrderItem($_SESSION['tableNum'],$_SESSION['tempItem'], $_POST['quantity'],$_SESSION['id'] );
-
 }
 
 if(isset($_GET['fav']) && isset($_GET['object'])) //If favourite button was pressed

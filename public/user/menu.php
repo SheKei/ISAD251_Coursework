@@ -13,7 +13,21 @@ $menuItems = ""; //Initialize return array of object
 
 if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
 {
-    $menuItems = filter();
+    if(isset($_POST['category']))
+    {
+        if($_POST['category']=="none") //If no filter option was selected
+        {
+            $menuItems = getAllMenuItems();
+        }
+    }
+    else
+    {
+        $menuItems = filter();
+    }
+}
+else
+{
+    $menuItems = getAllMenuItems();
 }
 
 ?>
@@ -44,6 +58,7 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
                         <input type="radio" name="category" value="Cake" checked="checked"> Cakes<br>
                         <input type="radio" name="category" value="Drink"> Drinks<br>
                         <input type="radio" name="category" value="both"> Both<br>
+                        <input type="radio" name="category" value="none"> NO FILTER<br>
                         </div>
                         <br>
                         <div>

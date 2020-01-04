@@ -74,6 +74,28 @@ class DB_Context
 
     }
 
+    //Show all menu items that are for sale, regardless of filter
+    public function showAllMenuItems()
+    {
+        $sql = "SELECT * FROM isad251_stong.tearoom_all_menu_items";
+
+        $result = $this->executeStatement($sql);
+
+        $menuItems = []; //Create an array to store menu item objects
+
+        if($result)//If there are any results returned from procedure
+        {
+            foreach($result as $row)
+            {
+                $aMenuItem = new menuItem( $row['item_id'],$row['name'], $row['selling_price'], $row['vegan'], $row['vegetarian'], $row['nut_free'], $row['img_path']); //Create object from each row
+                $menuItems[] = $aMenuItem;//Store object
+
+            }
+        }
+
+        return $menuItems; //Return to menuFilter controller
+    }
+
     //View specific details of a single item from the menu as a CUSTOMER
     public function viewTheItem($id)
     {
