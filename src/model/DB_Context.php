@@ -114,72 +114,45 @@ class DB_Context
         return $orderId;
     }
 
-    //Add an item to order with its quantity
+    //Add an item to order with its quantity or update quantity of existing item order
     public function insertNewOrderItem($tableNum, $itemId, $orderAmount, $orderId)
     {
-        $sql = "CALL isad251_stong.Tearoom_Insert_Order_Item(".$tableNum." , ".$itemId." , ".$orderAmount." , ".$orderId.")";
+        $firstSql = "CALL ISAD251_STong.Tearoom_Check_Order_Item(".$tableNum." , ".$itemId." , ".$orderId.")";
+
+        $checkOutput = $this->executeStatement($firstSql);  //Check if an item has already been ordered
+
+        if($checkOutput) //Update quantity of order item
+        {
+            $sql = "CALL ISAD251_STong.Tearoom_Update_Order_Item(".$tableNum." , ".$itemId." , ".$orderAmount." , ".$orderId.")";
+        }
+        else //Insert new order for an item
+        {
+            $sql = "CALL isad251_stong.Tearoom_Insert_Order_Item(".$tableNum." , ".$itemId." , ".$orderAmount." , ".$orderId.")";
+        }
+
         $this->executeStatementNoOutput($sql);
     }
 
-    //Return array of current items in order
-    public function viewCurrentItems($tableNumber, $orderId)
+
+    //View orders depending on what order status user wishes to see
+    public function viewOrders($table, $order, $orderStatus)
     {
-        $sql = "CALL isad251_stong.viewCurrentOrderItems(".$tableNumber.",".$orderId.")";
+        $sql = "CALL ISAD251_STong.Tearoom_View_Order(".$table.",".$order.",'".$orderStatus."')";
+
         $result = $this->executeStatement($sql);
+
         $orderItems = [];
 
-        $orderItems = $this->sortOrderItems($result, $orderItems, $tableNumber, $orderId);
+        if($result)
+        {
+            foreach($result as $row)
+            {
+                $orderItem = new orderItem($row['table_number'], $row['order_id'],$row['order_status'], $row['name'], $row['order_quantity'], $row['selling_price'], $row['totalItemPrice']);
+                $orderItems[] = $orderItem;
+            }
+        }
 
         return $orderItems;
-    }
-
-    //Convert results from select procedure VIEW ORDER ITEMS into ongoingOrderItem objects. Store objects into output array
-    public function sortOrderItems($theResult, $itemArray, $tableNum, $order)
-    {
-        if($theResult)//If there are any results returned from procedure
-        {
-            foreach($theResult as $row)
-            {
-                $theOrderItem = new ongoingOrderItem( $row['item_id'],$row['name'], $row['order_quantity'], $row['selling_price']); //Create object from each row
-                $thePrice = $this->calculateTotalPriceForEachItem($tableNum, $order, $theOrderItem->getId()); //Get calculated price
-                $theOrderItem->setTotalItemPrice($thePrice);//Save to object
-                $itemArray[] = $theOrderItem;//Store object
-
-            }
-        }
-        return $itemArray;
-    }
-
-    //Returns calculated cost of item * quantity
-    public function calculateTotalPriceForEachItem($tableNum, $orderNum, $item)
-    {
-        $sql = "CALL ISAD251_STong.calculateTotalItemPrice(".$tableNum.",".$orderNum.",".$item.")";
-        $price = $this->executeStatement($sql);
-        if($price)//If there are any results returned from procedure
-        {
-            foreach($price as $row)
-            {
-                $price = $row['totalPrice'];
-            }
-        }
-
-        return $price;
-    }
-
-    //Returns total cost of an order
-    public function calculateTotalOrderPrice($tableNumber, $orderId)
-    {
-        $sql = "CALL ISAD251_STong.calculateTotalOrder(".$tableNumber.",".$orderId.")";
-        $orderPrice = $this->executeStatement($sql);
-        if($orderPrice)
-        {
-            foreach($orderPrice as $row)
-            {
-                $orderPrice = $row['totalPrice'];
-            }
-        }
-
-        return $orderPrice;
 
     }
 
@@ -190,17 +163,6 @@ class DB_Context
         $this->executeStatementNoOutput($sql);
     }
 
-    //View items in current confirmed orders
-    public function viewConfirmedOrderItems($tableNumber, $orderId)
-    {
-        $sql = "CALL ISAD251_STong.Tearoom_View_Confirmed_Order_Items(".$tableNumber.",".$orderId.")";
-        $items = $this->executeStatement($sql);
-
-        $orderItems = [];
-        $orderItems = $this->sortOrderItems($items, $orderItems, $tableNumber, $orderId);
-
-        return $orderItems;
-    }
 
     //Returns a list of items that have been favourited and how many times they have been favourited.
     public function viewFavouriteItems($tableNumber)
@@ -214,7 +176,7 @@ class DB_Context
         {
             foreach($items as $row)
             {
-                $fav = new favItem($row['numberOfLikes'],$row['name'],$row['item_id']);
+                $fav = new favItem($row['numberOfLikes'],$row['name'],$row['item_id'], $row['img_path']);
                 $favourites[] = $fav;
             }
         }

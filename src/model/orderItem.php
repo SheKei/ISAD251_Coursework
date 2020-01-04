@@ -8,36 +8,38 @@
 
 class orderItem
 {
-    private $itemId;
+    private $tableNumber;
+    private $orderId;
+    private $itemOrderStatus;
     private $itemName;
     private $orderQuantity;
     private $singlePrice;
     private $totalPrice;//Set to zero first and then call another procedure to change value
 
-    public function __Construct($theItemId, $theItemName, $orderAmount, $price)
+    public function __Construct($tableNum,$theOrderId, $status, $theItemName, $orderAmount, $price, $theTotalPrice)
     {
-        $this->itemId = $theItemId;
+        $this->tableNumber = $tableNum;
+        $this->orderId = $theOrderId;
+        $this->itemOrderStatus = $status;
         $this->itemName = $theItemName;
         $this->orderQuantity = $orderAmount;
         $this->singlePrice = $price;
-        $this->totalPrice = 0;
+        $this->totalPrice = $theTotalPrice;
     }
 
-    //Call this after second procedure where we calculate the total price for each item
-    public function setTotalItemPrice($thePrice)
+    public function getTableNum()
     {
-        $this->totalPrice = $thePrice;
+        return $this->tableNumber;
     }
 
-    //Called when order amount is edited
-    public function setAmount($newAmount)
+    public function getOrderId()
     {
-        $this->orderQuantity = $newAmount;
+        return $this->orderId;
     }
 
-    public function getId()
+    public function getStatus()
     {
-        return $this->itemId;
+        return $this->itemOrderStatus;
     }
 
     public function getName()

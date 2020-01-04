@@ -49,10 +49,33 @@ function filter()
     }
 
     //Put parameters into procedure
-    //$sql = "CALL isad251_stong.Tearoom_Menu(".$nutFree.",".$veg.",".$vegan.",'".$category1."','".$category2."')";
 
     $db = new DB_Context();
     $items = $db->showMenu($nutFree,$veg,$vegan,$category1,$category2);//To DB_Context
     return $items; //Go back to menu.php
 
 }
+
+//Display the menu items after submitting filter
+function displayMenuItems($menuItems)
+{
+    if($menuItems) //If there are objects in menuItems array
+    {
+        echo $startRow = "<div class='row'>";
+
+        foreach($menuItems as $menuItem)
+        {
+            $img = '../../'.$menuItem->getImgPath();
+            $imgPath = "<img src='".$img."' alt='".$menuItem->getName()."' width='150' height='150'>";
+
+            $displayString = "<h3><a href='viewItem.php?object=".$menuItem->getId()."'><strong>".$menuItem->getName()."</a>- £".$menuItem->getPrice()."</h3></h3>";
+
+            $container = "<div style='padding:20px;font-size:25px;color:black;' class='col-sm-4 text-center'>".$displayString.$imgPath."</div>";
+
+            echo $container;
+        }
+
+        echo $endRow = "</div>";
+    }
+}
+

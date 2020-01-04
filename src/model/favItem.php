@@ -11,12 +11,14 @@ class favItem
     private $numOfLikes;
     private $name;
     private $id;
+    private $imgPath;
 
-    public function __Construct($numOfLikes, $theName, $theId)
+    public function __Construct($numOfLikes, $theName, $theId, $thePath)
     {
         $this->numOfLikes = $numOfLikes;
         $this->name = $theName;
         $this->id = $theId;
+        $this->imgPath = $thePath;
     }
 
     public function getNumOfLikes()
@@ -32,6 +34,11 @@ class favItem
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getImgPath()
+    {
+        return $this->imgPath;
     }
 
 }

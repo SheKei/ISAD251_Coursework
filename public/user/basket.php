@@ -14,40 +14,35 @@ include_once '../../src/controller/showBasket.php';
 
     <style>
 
-        #output
-        {
-            font-size: 20px;
-        }
     </style>
 
 </head>
 
 <body>
 
-<div class="container">
-    <div class="col-lg-12 text-center">
-        <h1> Basket </h1>
-    </div>
-</div>
+        <h1 class="text-center" style="font-size: 55px;"> Basket </h1>
 
-<div class="container" id="output">
+
+<div style='padding: 30px; font-size: 30px;' class="container">
 
     <?php
-        $breakLine="";
+        $orderStatus = "Ordering";
+
         $db = new DB_Context();
-        $theCurrentItems = $db->viewCurrentItems($_SESSION['tableNum'], $_SESSION['id']); //Return with an array of items
+        $theCurrentItems = $db->viewOrders($_SESSION['tableNum'], $_SESSION['id'], $orderStatus); //Return with an array of items
 
-        showOutput($theCurrentItems, $db);
-
-
+        if($theCurrentItems)
+        {
+            showOutput($theCurrentItems);
+        }
 
     ?>
 
 
 </div>
 
-<div class="container">
-    <form action="orderConfirmed.php" method="POST">
+<div class="container text-center">
+    <form style="font-size: 30px; padding: 20px;" action="orderConfirmed.php" method="POST">
         <input type="submit" name="confirmBtn" value="Confirm Order">
     </form>
 </div>

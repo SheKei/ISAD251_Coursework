@@ -2,8 +2,13 @@ DELIMITER //
 CREATE PROCEDURE isad251_stong.Tearoom_Menu(IN nutFree BOOLEAN, IN veg BOOLEAN, IN vegan BOOLEAN, category1 varchar(5), category2 varchar(5))
 BEGIN
 	SELECT
+    item_id,
     name,
-    selling_price
+    selling_price,
+    vegan,
+    vegetarian,
+    nut_free,
+    img_path
     FROM
     isad251_stong.tearoom_item
     WHERE

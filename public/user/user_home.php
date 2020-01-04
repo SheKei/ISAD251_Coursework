@@ -48,7 +48,7 @@ else
 
     <div class="container">
         <div class="col-lg-12 text-center">
-            <h2>Welcome! Your Table Number is <?php echo $_SESSION['tableNum'] ?> </h2>
+            <h2 style="font-size: 45px; padding: 20px;">Welcome! Your Table Number is <?php echo $_SESSION['tableNum'] ?> </h2>
         </div>
     </div>
 
@@ -57,10 +57,19 @@ else
         <?php
 
             $db = new DB_Context();
-            $confirmedItems = $db->viewConfirmedOrderItems($_SESSION['tableNum'], $_SESSION['id']);
+
+            $status1 = "Confirmed - Ongoing";
+            $confirmedItems = $db->viewOrders($_SESSION['tableNum'], $_SESSION['id'], $status1);
             if($confirmedItems)
             {
-                showOutput($confirmedItems, $db);
+                showConfirmedItems($confirmedItems);
+            }
+
+            $status2 = "Delivered";
+            $deliveredItems = $db->viewOrders($_SESSION['tableNum'], $_SESSION['id'], $status2);
+            if($deliveredItems)
+            {
+                showConfirmedItems($deliveredItems);
             }
 
 

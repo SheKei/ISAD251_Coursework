@@ -7,7 +7,7 @@ session_start();
 include_once  'user_nav.php';
 include_once '../header.php';
 include_once '../../src/model/DB_Context.php';
-include_once '../../src/model/favItem.php';
+include_once '../../src/controller/favouriteItems.php';
 ?>
 <head>
 
@@ -17,7 +17,7 @@ include_once '../../src/model/favItem.php';
 
 <div class="container">
     <div class="col-lg-12 text-center">
-        <h1> Favourites </h1>
+        <h1 style="font-size: 45px; padding: 20px;"> Favourites </h1>
     </div>
 </div>
 
@@ -30,11 +30,7 @@ include_once '../../src/model/favItem.php';
 
     if($favouriteItems)
     {
-        foreach($favouriteItems as $fav)
-        {
-            $displayString = "<p><a href='viewItem.php?object=".$fav->getId()."'>".$fav->getName()."</a>- Number of Favourites: ".$fav->getNumOfLikes()."</p>";
-            echo $displayString;
-        }
+        displayFavouriteItems($favouriteItems);
     }
 
     ?>
