@@ -1,6 +1,6 @@
 <?php
 
-
+//Display all menu items depending on what status
 function displayItems($status1, $status2)
 {
     $db = new DB_Admin();

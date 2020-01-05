@@ -51,32 +51,4 @@ class previewItems
     }
 
 
-    //SETTERS
-
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function setCategory($category)
-    {
-        $this->category = $category;
-    }
-
-
-    public function setImgPath($img)
-    {
-        $this->imgPath = $img;
-    }
-
-    public function setItemStatus($status)
-    {
-        $this->itemStatus = $status;
-    }
-
 }

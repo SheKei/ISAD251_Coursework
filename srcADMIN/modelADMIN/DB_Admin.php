@@ -9,6 +9,8 @@ include_once 'previewItems.php';
 include_once 'item.php';
 include_once 'order.php';
 include_once 'ongoingOrderItem.php';
+include_once 'orderedItems.php';
+include_once 'restockItem.php';
 
 class DB_Admin
 {
@@ -193,5 +195,45 @@ class DB_Admin
         $sql = "CALL ISAD251_STong.TeaAdmin_Deliver_Order(".$orderId.")";
         $this->executeStatementNoOutput($sql);
 
+    }
+
+    public function viewOrderItemsReport()
+    {
+        $sql = "SELECT * FROM ISAD251_STong.tea_admin_order_items";
+
+        $result = $this->executeStatement($sql);
+
+        $allItems = [];
+
+        if($result)
+        {
+            foreach ($result as $row)
+            {
+                $item = new orderedItems($row['order_id'], $row['table_number'], $row['order_date'], $row['order_status'], $row['item_id'], $row['name'], $row['order_quantity'], $row['total_Price']);
+                $allItems[] = $item;
+            }
+        }
+
+        return $allItems;
+    }
+
+    public function viewRestockReport()
+    {
+        $sql = "SELECT * FROM ISAD251_STong.tea_admin_restock_report";
+
+        $result = $this->executeStatement($sql);
+
+        $allItems = [];
+
+        if($result)
+        {
+            foreach ($result as $row)
+            {
+                $item = new restockItem($row['item_id'], $row['name'], $row['quantity'], $row['min_reorder_amount']);
+                $allItems[] = $item;
+            }
+        }
+
+        return $allItems;
     }
 }

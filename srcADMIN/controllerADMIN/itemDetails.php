@@ -8,6 +8,9 @@
 
 include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
+//Output html elements to only READ details of an item
+//Output one button to change the status of an item to withdrawn/sale
+//Output one button to READ and EDIT details of an item
 function outputDetails($itemId)
 {
     $db = new DB_Admin();

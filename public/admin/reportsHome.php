@@ -30,7 +30,7 @@ include_once 'adminNavBar.php';
         <br>
         <button type="button"class="btn btn-default btn-lg btn-block"><a href="../../api/allStockItems.php">STOCK ITEMS REPORT</button>
         <button type="button" class="btn btn-default btn-lg btn-block"><a href="../../api/allOrders.php">ALL ORDERS REPORT</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="#">TABLE REPORTS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="#">WEEKLY REPORTS</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><a href="reportOrderItems.php">ORDER ITEMS REPORTS</button>
+        <button type="button" class="btn btn-default btn-lg btn-block"><a href="reportRestock.php">RESTOCK REPORTS</button>
     </div>
 </div>

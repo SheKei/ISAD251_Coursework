@@ -4,6 +4,7 @@ SELECT
 tearoom_table_order.order_id,
 tearoom_table_order.table_number,
 tearoom_order.order_date,
+tearoom_order.order_status,
 tearoom_item.item_id,
 tearoom_item.name,
 tearoom_table_order.order_quantity,

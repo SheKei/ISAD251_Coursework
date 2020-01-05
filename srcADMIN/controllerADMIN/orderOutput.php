@@ -47,6 +47,7 @@ function displayOngoingOrders()
 
 }
 
+//Display the ordered items of an ongoing order
 function displayOrderItems($orderId)
 {
     $db = new DB_Admin();

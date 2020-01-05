@@ -8,6 +8,7 @@
 
 include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
+//Display html elements for user to view and edit fields
 function displayFieldsToEdit($itemId)
 {
     $db = new DB_Admin();
@@ -29,8 +30,8 @@ function displayFieldsToEdit($itemId)
         $imgOutput = $imgPath = "<img src='".$imgPath."' alt='".$item->getName()."' width='300' height='300'><br><br>";
 
         $itemName = "Item Name: <input type='text' name='name' value='".$item->getName()."' required><br><br>";
-        $buy = "Buying Cost: £<input type='text' name='buy' value='".$item->getBuyCost()."' required><br><br>";
-        $sell ="Selling Price: £<input type='text' name='sell' value='".$item->getSellCost()."'required><br><br>";
+        $buy = "Buying Cost: £<input type='text' id='buyPrice' name='buy' value='".$item->getBuyCost()."' onchange='checkInput()' required><br><br>";
+        $sell ="Selling Price: £<input type='text' id='sellPrice' name='sell' value='".$item->getSellCost()."' onchange='checkInput()' required><br><br>";
         $stock = "Current Stock: <input type='number' name='stock' value='".$item->getQuantity()."' required><br><br>";
         $minRestock = "Minimum Restock Quantity: <input type='number' name='restock' value='".$item->getReorderMinAmount()."'required> <br><br>";
 

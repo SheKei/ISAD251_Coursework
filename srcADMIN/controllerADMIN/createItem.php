@@ -11,7 +11,7 @@ createItem();
 
 function createItem()
 {
-    if(ISSET($_POST['addItemButton']))
+    if(ISSET($_POST['addItemButton'])) //If submit button was pressed from add item page
     {
         $itemName = $_POST['itemName'];
         $buy = $_POST['buy'];

@@ -7,6 +7,60 @@ include_once 'adminNavBar.php';
 
 <head>
 
+    <script>
+        function checkInput()
+        {
+            let sellingPrice = document.getElementById("sellPrice").value;
+            let buyingPrice =document.getElementById("buyPrice").value;
+
+            if(sellingPrice !== "")
+            {
+                var validInputSell = checkPrice(sellingPrice);
+            }
+
+            if(buyingPrice !== "")
+            {
+                var validInputBuy = checkPrice(buyingPrice);
+            }
+
+            if(validInputBuy === true && validInputSell === true)
+            {
+                comparePrices(sellingPrice, buyingPrice);
+            }
+
+        }
+
+        function checkPrice(priceInput)
+        {
+            let valid = true;
+            if(parseFloat(priceInput) < 0)
+            {
+                alert("PRICE MUST BE POSITIVE!");
+                valid = false;
+            }
+            else if(priceInput === "")
+            {
+                alert("CANNOT BE LEFT BLANK!");
+                valid = false;
+            }
+            else if(isNaN(priceInput) === true) //If input is not a number
+            {
+                alert("PRICE MUST BE A NUMBER!");
+                valid = false;
+            }
+            return valid;
+        }
+
+        function comparePrices(sellPrice, buyPrice)
+        {
+            if(sellPrice < buyPrice)
+            {
+                alert("SELLING PRICE CANNOT BE LESS THAN BUYING PRICE!");
+            }
+        }
+
+    </script>
+
 
 
     <style>
@@ -37,16 +91,16 @@ include_once 'adminNavBar.php';
         <input type="text" name="itemName" required><br><br>
 
         Buying Cost:
-        <input type="number" name="buy" required><br><br>
+        <input type="text" name="buy" id="buyPrice" onchange="checkInput()" required><br><br>
 
         Selling Price:
-        <input type="number" name="sell" required><br><br>
+        <input type="text" name="sell" id="sellPrice" onchange='checkInput()' required><br><br>
 
         Current Stock Quantity:
-        <input type="number" name="quantity" ><br><br>
+        <input type="number" name="quantity" required><br><br>
 
         Minimum Restock Quantity:
-        <input type="number" name="restock" ><br><br>
+        <input type="number" name="restock" required><br><br>
 
         <input type="checkbox" name="veg" value="1"> Vegetarian<br>
         <input type="checkbox" name="vegan" value="1"> Vegan<br>
@@ -73,10 +127,5 @@ include_once 'adminNavBar.php';
     </form>
 
 </div>
-
-
-
-
-
 
 </body>
