@@ -13,6 +13,7 @@ function createItem()
 {
     if(ISSET($_POST['addItemButton'])) //If submit button was pressed from add item page
     {
+        //Gather all input first
         $itemName = $_POST['itemName'];
         $buy = $_POST['buy'];
         $sell = $_POST['sell'];
@@ -21,7 +22,6 @@ function createItem()
         $category = $_POST['category'];
         $itemStatus = $_POST['itemStatus'];
         $img = "assets/img/".$_POST['imgName'].".jpg";
-
 
         if(ISSET($_POST['veg'])) {
             $veg = $_POST['veg'];
@@ -47,11 +47,37 @@ function createItem()
             $nutFree = 0;
         }
 
-        $db = new DB_Admin();
-        $db->addItem($itemName, $buy, $sell, $category, $quantity, $restock, $veg, $vegan, $nutFree, $img, $itemStatus);
+        //If sell input and buy inputs are valid numbers
+        if(is_numeric($sell) == true && is_numeric($buy) == true)
+        {
+            //If both selling price and buying price are positive and not equal to each other
+            if($sell > 0 && $buy > 0 && $sell != $buy)
+            {
+                //If the selling price is more than buying price
+                if($sell > $buy)
+                {
+                    $db = new DB_Admin();
+                    $db->addItem($itemName, $buy, $sell, $category, $quantity, $restock, $veg, $vegan, $nutFree, $img, $itemStatus);
+                    header("Location: ../../public/admin/itemsHome.php"); //Go back to items home page
 
-        header("Location: ../../public/admin/itemsHome.php"); //Go back to items home page
-        exit();
+                }
+                else
+                {
+                    header("Location: ../../public/admin/itemAdd.php?invalid=1"); //Go back to items add page
+
+                }
+            }
+            else{
+                header("Location: ../../public/admin/itemAdd.php?invalid=1"); //Go back to items add page
+            }
+
+        }
+        else
+        {
+            header("Location: ../../public/admin/itemAdd.php?invalid=1"); //Go back to items add page
+
+        }
+
 
     }
 

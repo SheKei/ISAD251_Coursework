@@ -83,6 +83,16 @@ include_once 'adminNavBar.php';
 <h1 class="text-center">Add an Item</h1>
 <br>
 
+
+    <?php
+            //If create function was not able to create item due to invalid input
+            if(isset($_GET['invalid']))
+            {
+                echo "<p style='color: darkred; font-size: 20px;' class='text-center'><strong>ERROR: There was an issue with either/both buying price and selling price input. ITEM WAS NOT CREATED<strong></p>";
+            }
+
+    ?>
+
 <div class="text-center">
 
     <form action = "../../srcADMIN/controllerADMIN/createItem.php" method="post">

@@ -78,6 +78,11 @@ include_once '../../srcADMIN/controllerADMIN/itemEditOutput.php';
 
 <?php
 
+if(isset($_GET['invalid']))
+{
+    echo "<p style='color: darkred; font-size: 20px;' class='text-center'><strong>ERROR: There was an issue with either/both buying price and selling price input. CHANGES NOT SAVED<strong></p>";
+}
+
 if(isset($_GET['object']))
 {
     $id = $_GET['object'];
