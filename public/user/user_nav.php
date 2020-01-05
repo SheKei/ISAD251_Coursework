@@ -3,9 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style>
 
@@ -15,10 +12,17 @@
             font-size: 30px;
 
         }
-
-
-
     </style>
+
+    <script>
+        function exitFunction() {
+            if (confirm("WARNING: THE ORDER WILL BE CANCELLED IF YOU HAVE NOT YET CONFIRMED YOUR ORDER!\nYOU WILL NOT BE ABLE TO ACCESS YOUR ORDER ONCE YOU LEAVE!")) {
+                location.replace("../../src/controller/cancel.php?exitOrder=1"); //Go to controller
+            } else {
+
+            }
+        }
+    </script>
 
 
 </head>
@@ -40,7 +44,7 @@
         </ul>
 
         <ul class="nav navbar-nav  ml-auto">
-            <button name = "leaveBtn" type="button" style="font-size: 20px; color: black;" class="btn btn-warning"><a href="../start.php">Leave</a></button>
+            <button name = "leaveBtn" type="button" style="font-size: 20px; color: black;" class="btn btn-warning" onclick="exitFunction()">Leave</button>
 
         </ul>
 

@@ -242,6 +242,13 @@ class DB_Context
         $this->executeStatementNoOutput($sql);
     }
 
+    //Cancel an order that has status of 'ordering';
+    public function cancelOrderingOrder($orderId)
+    {
+        $sql = "CALL ISAD251_STong.Tearoom_Exit_Order(".$orderId.")";
+        $this->executeStatementNoOutput($sql);
+    }
+
     public function insertFav($tableNum, $itemId)
     {
         $sql = "CALL ISAD251_STong.Tearoom_Insert_Fav(".$tableNum.",".$itemId.")";
