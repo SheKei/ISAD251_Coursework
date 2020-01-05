@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once '../../src/model/DB_Context.php';
 
 if(isset($_GET['orderId'])) //If cancel button was pressed for an ongoing order
@@ -8,9 +7,9 @@ if(isset($_GET['orderId'])) //If cancel button was pressed for an ongoing order
     cancelOrder($id);
 }
 
-if(isset($_GET['exitOrder']))
+if(isset($_GET['exitOrder']) && isset($_GET['theOrderId']))
 {
-    $theOrder = $_SESSION['id'];
+    $theOrder = $_GET['theOrderId'];
     cancelOrderReturnHome($theOrder);
 }
 

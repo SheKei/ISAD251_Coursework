@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +19,11 @@
 
     <script>
         function exitFunction() {
+
             if (confirm("WARNING: THE ORDER WILL BE CANCELLED IF YOU HAVE NOT YET CONFIRMED YOUR ORDER!\nYOU WILL NOT BE ABLE TO ACCESS YOUR ORDER ONCE YOU LEAVE!")) {
-                location.replace("../../src/controller/cancel.php?exitOrder=1"); //Go to controller
+                let orderId = document.getElementById("orderId").innerText; //Get the order id
+                var link = "../../src/controller/cancel.php?exitOrder=1&theOrderId="+orderId;
+                location.replace(link); //Go to controller
             } else {
 
             }
@@ -29,8 +35,7 @@
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navBar">
-    <a class="navbar-brand" style="font-size: 25px" href="user_home.php">Home</a>
-
+    <?php echo "<a class='navbar-brand'  style='font-size: 25px' href='user_home.php'>ORDER:<p class='text-center' id='orderId'>".$_SESSION['id']."</p></a>"?>
         <ul class="nav navbar-nav" id="links">
             <li class="nav-item">
                 <a class="nav-link" href="menu.php">Menu</a>

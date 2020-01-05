@@ -1,11 +1,8 @@
-<?php
-session_start();
-?>
 
 <?php
+include_once  '../../src/model/DB_Context.php';
 include_once  'user_nav.php';
 include_once '../header.php';
-include_once  '../../src/model/DB_Context.php';
 include_once '../../src/controller/showBasket.php';
 
 if(isset ($_POST['tableNumber']))
@@ -17,7 +14,10 @@ if(isset ($_POST['tableNumber']))
 
     $_SESSION['tableNum'] = $_POST['tableNumber']; //Save as global var
     $_SESSION['id'] = $orderId;
+
+    header("Location: user_home.php"); //Refresh page so nav bar has global var order id
 }
+
 
 ?>
 

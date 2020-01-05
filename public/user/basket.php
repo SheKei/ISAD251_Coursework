@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -9,6 +5,7 @@ include_once  'user_nav.php';
 include_once '../header.php';
 include_once '../../src/model/DB_Context.php';
 include_once '../../src/controller/showBasket.php';
+include_once '../../src/controller/cancel.php';
 
 
 if(isset($_GET['objectId'])) //If button for an item was pressed to be cancelled
