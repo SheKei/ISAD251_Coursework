@@ -1,16 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sheke
- * Date: 31/12/2019
- * Time: 13:17
- */
 include_once 'previewItems.php';
 include_once 'item.php';
 include_once 'order.php';
 include_once 'ongoingOrderItem.php';
 include_once 'orderedItems.php';
 include_once 'restockItem.php';
+include_once 'homeReport.php';
 
 class DB_Admin
 {
@@ -197,6 +192,7 @@ class DB_Admin
 
     }
 
+    //Output all ordered items from all tables and all statuses
     public function viewOrderItemsReport()
     {
         $sql = "SELECT * FROM ISAD251_STong.tea_admin_order_items";
@@ -217,12 +213,11 @@ class DB_Admin
         return $allItems;
     }
 
+    //Items with stock quantity less than minimum restock amount are outputted
     public function viewRestockReport()
     {
         $sql = "SELECT * FROM ISAD251_STong.tea_admin_restock_report";
-
         $result = $this->executeStatement($sql);
-
         $allItems = [];
 
         if($result)
@@ -235,5 +230,21 @@ class DB_Admin
         }
 
         return $allItems;
+    }
+
+    //Return one object with all statistics for home page to output
+    public function getHomeReport()
+    {
+        $sql = "SELECT * FROM ISAD251_STong.Tea_Admin_Home_Report";
+        $result = $this->executeStatement($sql);
+        if($result)
+        {
+            foreach($result as $row)
+            {
+                $report = new homeReport($row['totalIncome'],$row['totalOrders'],$row['buyingCost'], $row['itemsSold']);
+            }
+        }
+
+        return $report;
     }
 }
