@@ -27,7 +27,6 @@ include_once '../../srcADMIN/controllerADMIN/orderOutput.php';
 
     if(isset($_GET['order']))
     {
-
         $id = $_GET['order'];
         displayOrderItems($id);
     }

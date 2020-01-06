@@ -122,13 +122,10 @@ class DB_Context
 
         if($result)//Current order is either confirmed or delivered so make a new order id
         {
-
-            echo "no ordering order";
             $newNumber = $this->insertNewOrder($tableNumber); //Get another order for user to order items from
         }
         else //Current order is ordering so Continue adding items to current order
         {
-            echo "continue normal";
             $this->insertNewOrderItem($tableNumber, $itemId, $orderAmount, $orderId);
         }
 

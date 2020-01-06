@@ -9,7 +9,7 @@ include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 <head>
 
     <style>
-        h1
+        h1, body
         {
             font-family: "Century Schoolbook";
         }
@@ -42,7 +42,9 @@ include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
 
 ?>
-
+    <div class="container text-center" style=" padding: 30px;">
+        <button style="font-size: 30px;"><a href="../start.php">LOG OUT</a></button>
+    </div>
 
 
 
