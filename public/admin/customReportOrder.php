@@ -60,7 +60,7 @@ include_once '../../srcADMIN/controllerADMIN/customOrder.php';
 
 
 ?>
-    <input type='submit' name='getBtn' value='SEARCH'>
+    <input class="w3-button w3-black w3-round-large" type='submit' name='getBtn' value='SEARCH'>
     </form>
 
 

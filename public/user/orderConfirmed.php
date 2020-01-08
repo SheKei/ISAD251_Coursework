@@ -12,9 +12,9 @@ if(isset($_POST['confirmBtn']))
     $db->confirmOrder($_SESSION['tableNum'], $_SESSION['id']);
 }
 
+
 ?>
 <head>
-
     <style>
         #confirmed
         {

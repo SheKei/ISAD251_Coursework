@@ -19,8 +19,10 @@ if(isset($_GET['objectId'])) //If button for an item was pressed to be cancelled
 
 ?>
 <head>
-
     <style>
+        h1, h2, h3{
+            font-family: "Century Schoolbook", "SansSerif";
+        }
 
     </style>
 
@@ -51,7 +53,7 @@ if(isset($_GET['objectId'])) //If button for an item was pressed to be cancelled
 
 <div class="container text-center">
     <form style="font-size: 30px; padding: 20px;" action="orderConfirmed.php" method="POST">
-        <input type="submit" name="confirmBtn" value="Confirm Order">
+        <input class='w3-button w3-black w3-round-large' type="submit" name="confirmBtn" value="CONFIRM ORDER">
     </form>
 </div>
 

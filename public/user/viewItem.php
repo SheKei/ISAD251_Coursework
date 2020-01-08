@@ -24,12 +24,15 @@ if(isset($_POST['orderBtn']))               //If order button was pressed, inser
 {
     $db = new DB_Context();
 
-    $possibleNewId = $db->checkOrder($_SESSION['tableNum'],$_SESSION['id'] ,$_SESSION['tempItem'], $_POST['quantity']);
-
-    if($possibleNewId != 0) //If a new order had to be made because current had already been confirmed
+    if($_POST['quantity'] > 0) //If bigger than 0
     {
-        $_SESSION['id'] = $possibleNewId; //Update global variable
+        $possibleNewId = $db->checkOrder($_SESSION['tableNum'],$_SESSION['id'] ,$_SESSION['tempItem'], $_POST['quantity']);
 
+        if($possibleNewId != 0) //If a new order had to be made because current had already been confirmed
+        {
+            $_SESSION['id'] = $possibleNewId; //Update global variable
+
+        }
     }
 
 }
@@ -40,7 +43,7 @@ if(isset($_GET['fav']) && isset($_GET['object'])) //If favourite button was pres
     $itemId = $_GET['object'];
     addFavourtite($table, $itemId);
     header("Location: viewItem.php?object=$itemId"); //Refresh page
-    exit();
+
 }
 
 
@@ -52,13 +55,17 @@ if(isset($_GET['fav']) && isset($_GET['object'])) //If favourite button was pres
 <style>
     h2
     {
-        font-size: 30px;
+        font-size: 35px;
 
+    }
+
+    h1, h2, h3{
+        font-family: "Century Schoolbook", "SansSerif";
     }
 
     p
     {
-        font-size: 20px;
+        font-size: 25px;
     }
 
 </style>
@@ -90,7 +97,7 @@ if(isset($_GET['fav']) && isset($_GET['object'])) //If favourite button was pres
     <form class='text-center' style='font-size: 25px; padding: 20px;' action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
         Quantity <input type='number' name='quantity' min='1'>
         <br><br>
-        <input type='submit' name='orderBtn' value='Order'>
+        <input  class="w3-button w3-black w3-round-large" type='submit' name='orderBtn' value='ORDER'>
     </form>
 
 

@@ -6,14 +6,19 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
 
         #navBar
         {
             margin: 0 0 0 0;
-            font-size: 30px;
+            font-size: 40px;
 
+        }
+
+        body, h1, h2{
+            font-family: "Century Schoolbook", "SansSerif";
         }
     </style>
 
@@ -35,7 +40,7 @@ session_start();
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navBar">
-    <?php echo "<a class='navbar-brand'  style='font-size: 25px' href='user_home.php'>ORDER:<p class='text-center' id='orderId'>".$_SESSION['id']."</p></a>"?>
+    <?php echo "<a class='navbar-brand'  style='font-size: 30px' href='user_home.php'>ORDER:<p class='text-center' id='orderId'>".$_SESSION['id']."</p></a>" ?>
         <ul class="nav navbar-nav" id="links">
             <li class="nav-item">
                 <a class="nav-link" href="menu.php">Menu</a>
@@ -49,7 +54,7 @@ session_start();
         </ul>
 
         <ul class="nav navbar-nav  ml-auto">
-            <button name = "leaveBtn" type="button" style="font-size: 20px; color: black;" class="btn btn-warning" onclick="exitFunction()">Leave</button>
+            <button style='font-size: 40px;' name = "leaveBtn" type="button" style="font-size: 20px; color: black;" class="btn btn-warning" onclick="exitFunction()">Leave</button>
 
         </ul>
 

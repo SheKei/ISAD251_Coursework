@@ -35,7 +35,9 @@ else
 <head>
 
     <style>
-
+        h1, h2, h3{
+            font-family: "Century Schoolbook", "SansSerif";
+        }
 
     </style>
 
@@ -43,7 +45,7 @@ else
 
 <body>
 
-        <h1 style='font-size: 55px;' class ='text-center' >Menu </h1>
+        <h1 style='font-size: 55px; letter-spacing: 10px; padding: 20px;' class ='text-center'  >Menu </h1>
 
 
     <div class="jumbotron text-center">
@@ -67,8 +69,8 @@ else
                         <input type="checkbox" name="veg" value="True"> Vegetarian<br>
                         <input type="checkbox" name="vegan" value="True"> Vegan<br>
                         </div>
-
-                        <input type="submit" name="submitBtn" value="Submit">
+                        <br>
+                        <input class="w3-button w3-black w3-round-large" type="submit" name="submitBtn" value="Submit">
             </form>
     </div>
 

@@ -17,9 +17,9 @@ function showOutput($currentItems)
             $amount = "<Strong>Quantity:</Strong> ".$currentItem->getAmount();
             $totalItemPrice = "<Strong>Total Price:</Strong> £".$currentItem->getTotalItemPrice();
 
-            $cancelButton = "<button type='button'><a href='basket.php?objectId=".$currentItem->getItemId()."'>CANCEL ITEM</a></button>";
+            $cancelButton = "<button class='w3-button w3-black w3-round-large' type='button'><a style='color: white' href='basket.php?objectId=".$currentItem->getItemId()."'>CANCEL ITEM</a></button>";
 
-            $displayString = "<p>".$itemName." --- ".$price." --- ".$amount." --- ".$totalItemPrice."-----".$cancelButton."</p>";
+            $displayString = "<p>".$itemName." --- ".$price." --- ".$amount." --- ".$totalItemPrice." ----- ".$cancelButton."</p>";
             $breakLine = "<br>";
 
             echo $displayString;
@@ -62,8 +62,9 @@ function showConfirmedItems($items, $orderType)
 
                 if($orderType == "Confirmed - Ongoing") //Cancel functionality only for orders that have not been delivered
                 {
-                    $cancelButton = "<button type='button'><a href='../../src/controller/cancel.php?orderId=".$item->getOrderId()."'>CANCEL ORDER</a></button>";
+                    $cancelButton = "<button class='w3-button w3-black w3-round-large' type='button'><a style='color: white' href='../../src/controller/cancel.php?orderId=".$item->getOrderId()."'>CANCEL ORDER</a></button>";
                     echo $cancelButton;
+
                 }
             }
 

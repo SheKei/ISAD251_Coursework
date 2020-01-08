@@ -13,7 +13,7 @@ session_destroy();
 ?>
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,7 +39,7 @@ session_destroy();
 
     <div class="w3-display-topleft w3-container w3-xlarge">
         <p><button  class="w3-button" style="background-color: #FF9671"><a href="./admin/adminHome.php">Admin</a></button></p>
-        <p><button class="w3-button" style="background-color: #FF9671"><a href="choose_table.php">User</a></button></p>
+        <p><button class="w3-button" style="background-color: #FF9671"><a href="choose_table.php">Customer</a></button></p>
     </div>
     <div class="w3-display-bottomleft w3-container">
         <p class="w3-xlarge" style="font-size: 20px;">monday - friday 10-23 | saturday 14-02</p>

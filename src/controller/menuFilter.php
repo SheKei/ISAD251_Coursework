@@ -77,7 +77,7 @@ function displayMenuItems($menuItems)
             $img = '../../'.$menuItem->getImgPath();
             $imgPath = "<img src='".$img."' alt='".$menuItem->getName()."' width='150' height='150'>";
 
-            $displayString = "<h3><a href='viewItem.php?object=".$menuItem->getId()."'><strong>".$menuItem->getName()."</a>- £".$menuItem->getPrice()."</h3></h3>";
+            $displayString = "<h3><a style='color: black;' href='viewItem.php?object=".$menuItem->getId()."'><strong>".$menuItem->getName()."</a>- £".$menuItem->getPrice()."</h3></h3>";
 
             $container = "<div style='padding:20px;font-size:25px;color:black;' class='col-sm-4 text-center'>".$displayString.$imgPath."</div>";
 

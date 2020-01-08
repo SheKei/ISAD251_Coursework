@@ -67,7 +67,7 @@ function displayItem($item)
     $priceLabel = "<p>".$price."</p><br>";
     echo $priceLabel;
 
-    $favButton = "<button type='button'><a href='viewItem.php?object=".$item->getId()."&fav=1'>FAVOURITE</a></button>";
+    $favButton = "<button class='w3-button w3-orange w3-round-large' type='button'><a style='color: white' href='viewItem.php?object=".$item->getId()."&fav=1'>FAVOURITE THIS</a></button>";
     echo $favButton;
 
     echo $endContainer;

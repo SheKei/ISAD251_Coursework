@@ -8,6 +8,11 @@ include_once '../../src/model/DB_Context.php';
 include_once '../../src/controller/favouriteItems.php';
 ?>
 <head>
+    <style>
+        h1, h2, h3{
+            font-family: "Century Schoolbook", "SansSerif";
+        }
+    </style>
 
 </head>
 
@@ -15,7 +20,7 @@ include_once '../../src/controller/favouriteItems.php';
 
 <div class="container">
     <div class="col-lg-12 text-center">
-        <h1 style="font-size: 45px; padding: 20px;"> Favourites </h1>
+        <h1 style="font-size: 45px; padding: 20px; letter-spacing: 10px;"> Favourites </h1>
     </div>
 </div>
 

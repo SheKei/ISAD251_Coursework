@@ -15,8 +15,11 @@ if(isset ($_POST['tableNumber']))
     $_SESSION['tableNum'] = $_POST['tableNumber']; //Save as global var
     $_SESSION['id'] = $orderId;
 
-    header("Location: user_home.php"); //Refresh page so nav bar has global var order id
+    //header("user_home.php"); //Refresh page so nav bar has global var order id
+    header("user_home.php");
+
 }
+
 
 
 ?>
@@ -28,6 +31,10 @@ if(isset ($_POST['tableNumber']))
 
             body{
                 background-color: white;
+            }
+
+            h1, h2, h3{
+                font-family: "Century Schoolbook", "SansSerif";
             }
 
         </style>
@@ -62,6 +69,10 @@ if(isset ($_POST['tableNumber']))
                 showConfirmedItems($deliveredItems, $status2);
             }
 
+            if(empty($confirmedItems) && empty($deliveredItems))
+            {
+                echo "<h3 class='text-center' style='padding:20px;'>You have yet to confirm your order, head over to basket once you are finished ordering!</h3>";
+            }
 
         ?>
 
