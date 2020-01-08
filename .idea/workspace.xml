@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/adminNavBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/adminNavBar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/customReportOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/customReportOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/start.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/start.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/favourites.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/favourites.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/orderConfirmed.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/orderConfirmed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/user_home.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/user_home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/user_nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/user_nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/viewItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/viewItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/displayItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/displayItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/favouriteItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/favouriteItems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/menuFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/menuFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/showBasket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/showBasket.php" afterDir="false" />
-    </list>
+    <list default="true" id="5db0e21a-41c5-4f6a-8ad1-4ad2c2b48b40" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#981#1020#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
@@ -155,7 +139,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="y" value="-10" />
     <option name="width" value="980" />
@@ -250,7 +234,7 @@
       <workItem from="1578227840149" duration="16710000" />
       <workItem from="1578340315453" duration="3499000" />
       <workItem from="1578389003076" duration="667000" />
-      <workItem from="1578483201120" duration="10629000" />
+      <workItem from="1578483201120" duration="10906000" />
     </task>
     <task id="LOCAL-00001" summary="Created procedure to filter/view menu on customer side. Created web layout of filter function.">
       <created>1575915699418</created>
@@ -392,14 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578523465263</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="CSS styling for customer side">
+      <created>1578526830645</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578526830645</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151127000" />
+    <option name="totallyTimeSpent" value="151404000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20134228" />
@@ -468,7 +459,8 @@
     <MESSAGE value="Fixed cancel order bug due to clash with start_session() being in multiple files" />
     <MESSAGE value="Added a trigger where items of a stock are automatically updated when an order has been delivered. Used a css template to restyle the overall home page for both admin and customer" />
     <MESSAGE value="Added filter function for giving giving a report on order items as admin. Added css styling to make information more visually nice." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added filter function for giving giving a report on order items as admin. Added css styling to make information more visually nice." />
+    <MESSAGE value="CSS styling for customer side" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS styling for customer side" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/model/orderItem.php">
@@ -883,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/user/user_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#981#1020#0#HTML" expanded="true" />
             <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
