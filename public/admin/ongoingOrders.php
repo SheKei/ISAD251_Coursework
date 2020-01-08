@@ -19,7 +19,7 @@ include_once '../../srcADMIN/controllerADMIN/orderOutput.php';
 
     </style>
 
-    <h1 class="text-center">ONGOING ORDERS</h1>
+    <h1 class="text-center" style="padding: 30px; letter-spacing: 10px;">ONGOING ORDERS</h1>
 
 </head>
 

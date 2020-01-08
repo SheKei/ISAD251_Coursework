@@ -247,4 +247,44 @@ class DB_Admin
 
         return $report;
     }
+
+    //Get all existing order_ids
+    public function getAllOrderIds()
+    {
+        $sql = "SELECT DISTINCT order_id FROM isad251_stong.tearoom_table_order ORDER BY tearoom_table_order.order_id ASC;";
+
+        $result = $this->executeStatement($sql);
+        $allOrders = [];
+
+        if($result)
+        {
+            foreach ($result as $row)
+            {
+                $order = $row['order_id'];
+                $allOrders[] = $order;
+            }
+        }
+
+        return $allOrders;
+
+    }
+
+    //Get all items ordered depending on the order id
+    public function getOrderItemsForOrder($orderId)
+    {
+        $sql = "CALL ISAD251_STong.Tea_Admin_Order_Items(".$orderId.")";
+        $result = $this->executeStatement($sql);
+        $allItems = [];
+
+        if($result)
+        {
+            foreach ($result as $row)
+            {
+                $item = new orderedItems($row['order_id'], $row['table_number'], $row['order_date'], $row['order_status'], $row['item_id'], $row['name'], $row['order_quantity'], $row['total_Price']);
+                $allItems[] = $item;
+            }
+        }
+        return $allItems;
+
+    }
 }

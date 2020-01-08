@@ -18,6 +18,11 @@ include_once 'adminNavBar.php';
             font-family: "Century Schoolbook";
         }
 
+        #button
+        {
+            font-size: 25px;
+        }
+
     </style>
 
 </head>
@@ -26,12 +31,12 @@ include_once 'adminNavBar.php';
 
 <div class="container">
     <div class="jumbotron">
-        <h1 class="text-center">Items</h1>
+        <h1 class="text-center" style="padding: 20px; letter-spacing: 5px;">Items</h1>
         <br>
-        <button type="button"class="btn btn-default btn-lg btn-block"><a href="itemsAll.php">ALL ITEMS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="itemsWithdrawn.php">WITHDRAWN ITEMS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="itemsSale.php">SALE ITEMS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="itemAdd.php">ADD NEW ITEM</button>
+        <button id="button" type="button"class="btn btn-default btn-lg btn-block"><a href="itemsAll.php">ALL ITEMS</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="itemsWithdrawn.php">WITHDRAWN ITEMS</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="itemsSale.php">SALE ITEMS</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="itemAdd.php">ADD NEW ITEM</button>
     </div>
 </div>
 

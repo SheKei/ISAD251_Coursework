@@ -28,7 +28,7 @@ include_once '../../srcADMIN/controllerADMIN/itemsOutput.php';
 
 <body>
 
-<h1 class="text-center">WITHDRAWN ITEMS</h1>
+<h1 style="letter-spacing: 10px; padding: 20px;" class="text-center">WITHDRAWN ITEMS</h1>
 
 <?php
 

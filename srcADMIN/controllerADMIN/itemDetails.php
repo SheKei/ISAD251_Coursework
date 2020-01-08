@@ -77,11 +77,11 @@ function outputDetails($itemId)
         $endContainer = "</div>";
         $startRow = "<div class='row'>";
         $anotherContainer = "<div class='col-lg-6'>";
-        $aContainer = "<div class='col-lg-6 text-left'>";
+        $aContainer = "<div class='col-lg-6 text-left' style='font-size: 20px;'>";
 
-        $editButton = "<button type='button'><a href='itemEdit.php?object=".$item->getId()."'>"."EDIT ITEM"."</a></button>";
+        $editButton = "<button class='w3-button w3-black w3-round-large' type='button'><a href='itemEdit.php?object=".$item->getId()."'>"."EDIT ITEM"."</a></button>";
 
-        $statusButton = "<button type='button'><a href='../../srcADMIN/controllerADMIN/changeStatus.php?object=".$item->getId()."&status=".$item->getItemStatus()."'>".$buttonName."</a></button>";
+        $statusButton = "<button  class='w3-button w3-black w3-round-large' type='button'><a href='../../srcADMIN/controllerADMIN/changeStatus.php?object=".$item->getId()."&status=".$item->getItemStatus()."'>".$buttonName."</a></button>";
 
         $outputForm = "<br><br>".$aContainer.$statusButton.$endContainer;
         $outputEditButton ="<br>".$aContainer.$editButton.$endContainer;

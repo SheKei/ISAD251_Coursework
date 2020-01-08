@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sheke
- * Date: 31/12/2019
- * Time: 13:25
- */
 
 class previewItems
 {

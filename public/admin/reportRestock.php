@@ -19,7 +19,7 @@ include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
     </style>
 
-    <h1 class="text-center">RESTOCK REPORT</h1>
+    <h1 class="text-center" style="padding: 20px; letter-spacing: 10px;">RESTOCK REPORT</h1>
 
 </head>
 
@@ -38,10 +38,10 @@ if($allObjects)
 {
     foreach($allObjects as $object)
     {
-        echo "<div class='container'>";
-        echo $item = "<p>ITEM ID: ".$object->getId()." - ".$object->getName()."</p>";
-        echo $stock = "<p>CURRENT STOCK:".$object->getQuantity()."</p>";
-        echo $reorder = "<p>MINIMUM REORDER AMOUNT: ".$object->getReorderAmount()."</p><br>";
+        echo "<div class='container' style='padding: 10px;'>";
+        echo $item = "<p><strong>ITEM ID: </strong> ".$object->getId()." - ".$object->getName()."</p>";
+        echo $stock = "<p><strong>CURRENT STOCK: </strong>".$object->getQuantity()."</p>";
+        echo $reorder = "<p><strong>MINIMUM REORDER: </strong> ".$object->getReorderAmount()."</p><br>";
         echo "</div>";
     }
 

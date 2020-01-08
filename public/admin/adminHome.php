@@ -20,7 +20,7 @@ include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 </head>
 
 <body>
-        <h1 class="text-center" style="font-size: 55px; padding:30px;">WELCOME ADMIN</h1>
+        <h1 class="text-center" style="font-size: 55px; padding:30px; letter-spacing: 10px;">WELCOME ADMIN</h1>
 
 <?php
     $db = new DB_Admin();
@@ -43,7 +43,7 @@ include_once '../../srcADMIN/modelADMIN/DB_Admin.php';
 
 ?>
     <div class="container text-center" style=" padding: 30px;">
-        <button style="font-size: 30px;"><a href="../start.php">LOG OUT</a></button>
+        <button  class="w3-button w3-black w3-round-large" style="font-size: 30px;"><a href="../start.php">LOG OUT</a></button>
     </div>
 
 

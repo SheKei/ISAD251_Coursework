@@ -35,7 +35,7 @@ function displayOngoingOrders()
 
             $orderDate = "<p>ORDER DATE: ".$anOrder->getOrderDate()."</p>";
 
-            $container = "<div class='col-sm-6 text-center'>".$orderId.$tableNum.$orderDate."</div>";
+            $container = "<div class='col-sm-6 text-center' style='padding: 20px'>".$orderId.$tableNum.$orderDate."</div>";
 
             echo $container;
 

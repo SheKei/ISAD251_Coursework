@@ -18,6 +18,11 @@ include_once 'adminNavBar.php';
             font-family: "Century Schoolbook";
         }
 
+        #button
+        {
+            font-size: 25px;
+        }
+
     </style>
 
 </head>
@@ -26,11 +31,12 @@ include_once 'adminNavBar.php';
 
 <div class="container">
     <div class="jumbotron">
-        <h1 class="text-center">Reports</h1>
+        <h1 class="text-center" style="padding: 20px; letter-spacing: 5px;">Reports</h1>
         <br>
-        <button type="button"class="btn btn-default btn-lg btn-block"><a href="../../api/allStockItems.php">STOCK ITEMS REPORT</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="../../api/allOrders.php">ALL ORDERS REPORT</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="reportOrderItems.php">ORDER ITEMS REPORTS</button>
-        <button type="button" class="btn btn-default btn-lg btn-block"><a href="reportRestock.php">RESTOCK REPORTS</button>
+        <button id="button" type="button"class="btn btn-default btn-lg btn-block"><a href="../../api/allStockItems.php">STOCK ITEMS REPORT</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="../../api/allOrders.php">ALL ORDERS REPORT</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="reportOrderItems.php">ALL ORDER ITEMS REPORTS</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="customReportOrder.php">CUSTOM ORDER ITEMS REPORTS</button>
+        <button id="button" type="button" class="btn btn-default btn-lg btn-block"><a href="reportRestock.php">RESTOCK REPORTS</button>
     </div>
 </div>

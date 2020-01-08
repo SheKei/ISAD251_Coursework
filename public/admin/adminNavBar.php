@@ -10,6 +10,11 @@
             font-family: "Century Schoolbook";
         }
 
+        .w3-top
+        {
+            font-size: 30px;
+        }
+
     </style>
 
 </head>

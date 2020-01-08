@@ -19,11 +19,12 @@ if(ISSET($_POST['submitBtn'])) //If filter button has been pressed
         {
             $menuItems = getAllMenuItems();
         }
+        else
+        {
+            $menuItems = filter();
+        }
     }
-    else
-    {
-        $menuItems = filter();
-    }
+
 }
 else
 {

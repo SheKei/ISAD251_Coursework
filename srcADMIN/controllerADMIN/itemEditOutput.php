@@ -20,7 +20,7 @@ function displayFieldsToEdit($itemId)
         $startForm="<form action='../../srcADMIN/controllerADMIN/itemEdit.php' method='post'>";
         $endForm ="</form>";
 
-        $startContainer = "<div class='text-center'>";
+        $startContainer = "<div class='text-center' style='padding: 20px;'>";
         $endContainer = "</div>";
 
         $idItem = "Item ID: <input type='text' name='id' value='".$item->getId()."' readonly><br><br>";
@@ -77,7 +77,7 @@ function displayFieldsToEdit($itemId)
 
         $outputSelect = $selectCategory.$firstSelect.$secondSelect.$endSelect;
 
-        $submitBtn = "<input type='submit' name='saveEdit' value='Save Changes'>";
+        $submitBtn = "<input class='w3-button w3-black w3-round-large' type='submit' name='saveEdit' value='SAVE CHANGES'>";
 
         echo $startContainer;
         echo $startForm;

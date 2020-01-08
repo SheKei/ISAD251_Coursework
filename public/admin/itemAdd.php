@@ -80,7 +80,7 @@ include_once 'adminNavBar.php';
 
 <body>
 
-<h1 class="text-center">Add an Item</h1>
+<h1 style="letter-spacing: 10px; padding: 20px;" class="text-center">Add an Item</h1>
 <br>
 
 
@@ -93,17 +93,17 @@ include_once 'adminNavBar.php';
 
     ?>
 
-<div class="text-center">
+<div class="text-center" style="padding: 20px;">
 
     <form action = "../../srcADMIN/controllerADMIN/createItem.php" method="post">
 
         Item Name:
         <input type="text" name="itemName" required><br><br>
 
-        Buying Cost:
+        Buying Cost: £
         <input type="text" name="buy" id="buyPrice" onchange="checkInput()" required><br><br>
 
-        Selling Price:
+        Selling Price: £
         <input type="text" name="sell" id="sellPrice" onchange='checkInput()' required><br><br>
 
         Current Stock Quantity:
@@ -132,7 +132,7 @@ include_once 'adminNavBar.php';
         Image: assets/img/
         <input type="text" name="imgName" required>.jpg<br><br>
 
-        <input type="submit" name="addItemButton" value="Submit">
+        <input class="w3-button w3-black w3-round-large" type="submit" name="addItemButton" value="SUBMIT">
 
     </form>
 
